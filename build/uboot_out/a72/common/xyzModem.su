@@ -1,0 +1,8 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:67:1:CYGACC_COMM_IF_GETC_TIMEOUT.constprop	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:242:1:xyzModem_flush	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:255:1:xyzModem_get_hdr	80	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:429:1:xyzModem_stream_open	112	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:517:1:xyzModem_stream_read	96	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:647:1:xyzModem_stream_close	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:659:1:xyzModem_stream_terminate	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/common/xyzModem.c:715:1:xyzModem_error	0	static

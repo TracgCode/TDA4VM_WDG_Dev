@@ -1,0 +1,6 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/ubi/upd.c:82:12:clear_update_marker	224	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/ubi/upd.c:227:12:write_leb	64	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/ubi/upd.c:122:5:ubi_start_update	240	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/ubi/upd.c:176:5:ubi_start_leb_change	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/ubi/upd.c:273:5:ubi_more_update_data	80	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/ubi/upd.c:393:5:ubi_more_leb_change_data	64	static

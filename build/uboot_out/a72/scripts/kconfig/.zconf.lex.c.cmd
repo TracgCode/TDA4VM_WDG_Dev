@@ -1,0 +1,1 @@
+cmd_scripts/kconfig/zconf.lex.c := flex -oscripts/kconfig/zconf.lex.c -L /home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/scripts/kconfig/zconf.l

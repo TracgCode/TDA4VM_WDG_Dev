@@ -1,0 +1,7 @@
+k3-sec-proxy.c:134:12:k3_sec_proxy_request	0	static
+k3-sec-proxy.c:267:12:k3_sec_proxy_recv	16	static
+k3-sec-proxy.c:198:12:k3_sec_proxy_send	40	static
+k3-sec-proxy.c:105:12:k3_sec_proxy_of_xlate	32	static
+k3-sec-proxy.c:401:12:k3_sec_proxy_remove	8	static
+k3-sec-proxy.c:375:12:k3_sec_proxy_probe	24	static
+k3-sec-proxy.c:145:12:k3_sec_proxy_free	0	static

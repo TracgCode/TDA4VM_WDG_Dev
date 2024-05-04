@@ -1,0 +1,10 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:33:5:cdns3_set_mode	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:70:5:cdns3_get_id	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:80:5:cdns3_get_vbus	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:90:5:cdns3_is_host	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:100:5:cdns3_is_device	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:118:5:cdns3_drd_switch_host	48	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:155:5:cdns3_drd_switch_gadget	48	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:217:5:cdns3_drd_update_mode	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:240:5:cdns3_drd_init	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/usb/cdns3/drd.c:299:5:cdns3_drd_exit	0	static

@@ -1,0 +1,1 @@
+cmd_drivers/remoteproc/built-in.o :=  rm -f drivers/remoteproc/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/remoteproc/built-in.o drivers/remoteproc/rproc-uclass.o drivers/remoteproc/rproc-elf-loader.o drivers/remoteproc/ti_k3_dsp_rproc.o drivers/remoteproc/ti_k3_r5f_rproc.o

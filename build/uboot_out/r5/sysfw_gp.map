@@ -1,0 +1,4 @@
+ImagePos    Offset      Size  Name
+00000000  00000000  000403ad  sysfw_gp
+00000000   00000000  000003cd  ti-secure-rom
+000003cd   000003cd  0003ffe0  ti-fs.bin

@@ -1,0 +1,4 @@
+ti_k3_arm64_rproc.c:132:12:k3_arm64_init	0	static
+ti_k3_arm64_rproc.c:109:12:k3_arm64_start	16	static
+ti_k3_arm64_rproc.c:57:12:k3_arm64_load	32	static
+ti_k3_arm64_rproc.c:234:12:k3_arm64_probe	16	static

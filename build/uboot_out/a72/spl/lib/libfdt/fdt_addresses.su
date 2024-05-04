@@ -1,0 +1,4 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/lib/libfdt/../../scripts/dtc/libfdt/fdt_addresses.c:14:12:fdt_cells	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/lib/libfdt/../../scripts/dtc/libfdt/fdt_addresses.c:34:5:fdt_address_cells	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/lib/libfdt/../../scripts/dtc/libfdt/fdt_addresses.c:46:5:fdt_size_cells	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/lib/libfdt/../../scripts/dtc/libfdt/fdt_addresses.c:57:5:fdt_appendprop_addrrange	96	static

@@ -1,0 +1,9 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:49:5:rproc_elf32_sanity_check	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:106:5:rproc_elf64_sanity_check	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:161:5:rproc_elf32_load_image	80	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:207:5:rproc_elf64_load_image	112	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:261:5:rproc_elf_load_image	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:290:7:rproc_elf_get_boot_addr	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:374:5:rproc_elf32_load_rsc_table	112	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:483:5:rproc_elf64_load_rsc_table	112	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/rproc-elf-loader.c:519:5:rproc_elf_load_rsc_table	0	static

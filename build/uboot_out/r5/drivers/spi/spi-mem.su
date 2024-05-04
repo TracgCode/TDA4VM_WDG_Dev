@@ -1,0 +1,13 @@
+spi-mem.c:115:12:spi_check_buswidth_req.isra.0	0	static
+spi-mem.c:150:13:spi_mem_check_buswidth	16	static
+spi-mem.c:172:6:spi_mem_dtr_supports_op	0	static
+spi-mem.c:196:6:spi_mem_default_supports_op	0	static
+spi-mem.c:224:6:spi_mem_supports_op	4	static
+spi-mem.c:249:5:spi_mem_exec_op	56	dynamic
+spi-mem.c:468:5:spi_mem_adjust_op_size	8	static
+spi-mem.c:500:16:spi_mem_no_dirmap_read	72	static
+spi-mem.c:554:1:spi_mem_dirmap_create	24	static
+spi-mem.c:603:6:spi_mem_dirmap_destroy	8	static
+spi-mem.c:702:9:spi_mem_dirmap_read	8	static
+spi-mem.c:742:9:spi_mem_dirmap_write	8	static
+spi-mem.c:765:5:spi_mem_do_calibration	8	static

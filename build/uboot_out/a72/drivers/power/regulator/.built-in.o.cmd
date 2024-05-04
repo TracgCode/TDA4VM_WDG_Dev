@@ -1,0 +1,1 @@
+cmd_drivers/power/regulator/built-in.o :=  rm -f drivers/power/regulator/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/power/regulator/built-in.o drivers/power/regulator/regulator-uclass.o drivers/power/regulator/regulator_common.o drivers/power/regulator/fixed.o drivers/power/regulator/gpio-regulator.o

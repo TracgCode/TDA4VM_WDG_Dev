@@ -1,0 +1,5 @@
+sysfw-loader.c:111:12:fit_get_data_by_name	16	static
+sysfw-loader.c:123:13:k3_start_system_controller.constprop	16	static
+sysfw-loader.c:91:24:spl_get_load_buffer	8	static
+sysfw-loader.c:106:6:spl_load_simple_fit_skip_processing	0	static
+sysfw-loader.c:368:6:k3_sysfw_loader	152	static

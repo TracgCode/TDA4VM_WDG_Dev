@@ -1,0 +1,1 @@
+cmd_drivers/crypto/fsl/built-in.o :=  rm -f drivers/crypto/fsl/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/crypto/fsl/built-in.o drivers/crypto/fsl/sec.o

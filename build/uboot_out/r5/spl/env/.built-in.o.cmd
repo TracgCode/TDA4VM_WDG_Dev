@@ -1,0 +1,1 @@
+cmd_spl/env/built-in.o :=  rm -f spl/env/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/env/built-in.o spl/env/common.o spl/env/env.o spl/env/attr.o spl/env/flags.o spl/env/nowhere.o

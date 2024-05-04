@@ -1,0 +1,1 @@
+cmd_drivers/mux/built-in.o :=  rm -f drivers/mux/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/mux/built-in.o drivers/mux/mux-uclass.o drivers/mux/mmio.o

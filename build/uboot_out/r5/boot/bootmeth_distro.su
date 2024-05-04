@@ -1,0 +1,6 @@
+bootmeth_distro.c:25:12:distro_get_state_desc	0	static
+bootmeth_distro.c:141:12:distro_boot	88	static
+bootmeth_distro.c:38:12:distro_getfile	24	static
+bootmeth_distro.c:164:12:distro_bootmeth_bind	8	static
+bootmeth_distro.c:101:12:distro_read_bootflow	256	static
+bootmeth_distro.c:57:12:distro_check	0	static

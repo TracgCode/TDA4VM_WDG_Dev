@@ -1,0 +1,1 @@
+cmd_drivers/power/domain/built-in.o :=  rm -f drivers/power/domain/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/power/domain/built-in.o drivers/power/domain/power-domain-uclass.o drivers/power/domain/ti-sci-power-domain.o

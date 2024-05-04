@@ -1,0 +1,3 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/soc/soc_ti_k3.c:114:5:soc_ti_k3_probe	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/soc/soc_ti_k3.c:91:12:soc_ti_k3_get_family	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/soc/soc_ti_k3.c:100:12:soc_ti_k3_get_revision	32	static

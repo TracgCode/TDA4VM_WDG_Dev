@@ -1,0 +1,1 @@
+cmd_spl/drivers/dma/built-in.o :=  rm -f spl/drivers/dma/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/dma/built-in.o spl/drivers/dma/dma-uclass.o spl/drivers/dma/ti/built-in.o

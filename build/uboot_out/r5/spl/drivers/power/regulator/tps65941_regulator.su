@@ -1,0 +1,14 @@
+tps65941_regulator.c:79:12:tps65941_buck_val2volt	0	static
+tps65941_regulator.c:345:12:ldo_set_enable	16	static
+tps65941_regulator.c:379:12:buck_set_enable	0	static
+tps65941_regulator.c:264:12:tps65941_ldo_probe	8	static
+tps65941_regulator.c:286:12:tps65941_buck_probe	8	static
+tps65941_regulator.c:63:12:tps65941_buck_volt2val	0	static
+tps65941_regulator.c:225:12:tps65941_ldo_val	24	static
+tps65941_regulator.c:328:12:ldo_set_value	16	static
+tps65941_regulator.c:316:12:ldo_get_value	16	static
+tps65941_regulator.c:362:12:buck_set_value	32	static
+tps65941_regulator.c:333:12:ldo_get_enable	8	static
+tps65941_regulator.c:367:12:buck_get_enable	0	static
+tps65941_regulator.c:350:12:buck_get_value	8	static
+tps65941_regulator.c:95:5:tps65941_lookup_slew	0	static

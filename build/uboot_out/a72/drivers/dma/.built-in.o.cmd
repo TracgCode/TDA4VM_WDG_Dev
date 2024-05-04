@@ -1,0 +1,1 @@
+cmd_drivers/dma/built-in.o :=  rm -f drivers/dma/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/dma/built-in.o drivers/dma/dma-uclass.o drivers/dma/ti/built-in.o

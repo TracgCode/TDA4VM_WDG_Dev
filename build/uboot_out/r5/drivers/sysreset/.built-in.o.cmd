@@ -1,0 +1,1 @@
+cmd_drivers/sysreset/built-in.o :=  rm -f drivers/sysreset/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/sysreset/built-in.o drivers/sysreset/sysreset-uclass.o drivers/sysreset/sysreset-ti-sci.o

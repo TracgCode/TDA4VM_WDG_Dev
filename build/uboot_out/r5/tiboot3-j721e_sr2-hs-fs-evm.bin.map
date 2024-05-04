@@ -1,0 +1,4 @@
+ImagePos    Offset      Size  Name
+00000000  00000000  0004834c  tiboot3-j721e_sr2-hs-fs-evm.bin
+00000000   00000000  000006d4  ti-secure-rom
+000006d4   000006d4  00047c78  u-boot-spl

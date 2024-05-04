@@ -1,0 +1,1 @@
+cmd_spl/u-boot-spl.multidtb.fit := ./tools/mkimage -f auto -A arm -T firmware -C none -O u-boot -n "Multi DTB fit image for u-boot-spl" -E -b spl/dts/k3-j721e-common-proc-board.dtb -b spl/dts/k3-j721e-sk.dtb -d /dev/null spl/u-boot-spl.multidtb.fit >/dev/null 

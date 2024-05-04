@@ -1,0 +1,5 @@
+vbe_request.c:75:12:vbe_req_random_seed	0	static
+vbe_request.c:152:12:bootmeth_vbe_ft_fixup	168	static
+vbe_request.c:85:12:vbe_req_aslr_rand	0	static
+vbe_request.c:90:12:vbe_req_efi_runtime_rand	0	static
+vbe_request.c:80:12:vbe_req_aslr_move	0	static

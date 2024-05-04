@@ -1,0 +1,10 @@
+drd.c:33:5:cdns3_set_mode	8	static
+drd.c:70:5:cdns3_get_id	0	static
+drd.c:80:5:cdns3_get_vbus	0	static
+drd.c:90:5:cdns3_is_host	8	static
+drd.c:100:5:cdns3_is_device	8	static
+drd.c:118:5:cdns3_drd_switch_host	16	static
+drd.c:155:5:cdns3_drd_switch_gadget	16	static
+drd.c:217:5:cdns3_drd_update_mode	8	static
+drd.c:240:5:cdns3_drd_init	8	static
+drd.c:299:5:cdns3_drd_exit	0	static

@@ -1,0 +1,5 @@
+soc-uclass.c:16:5:soc_get	0	static
+soc-uclass.c:21:5:soc_get_machine	0	static
+soc-uclass.c:31:5:soc_get_family	0	static
+soc-uclass.c:41:5:soc_get_revision	0	static
+soc-uclass.c:52:1:soc_device_match	152	static

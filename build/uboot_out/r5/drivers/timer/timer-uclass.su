@@ -1,0 +1,6 @@
+timer-uclass.c:94:12:timer_post_probe	8	static
+timer-uclass.c:52:12:timer_pre_probe	48	static
+timer-uclass.c:34:13:timer_get_count	8	static
+timer-uclass.c:45:23:timer_get_rate	8	static
+timer-uclass.c:130:5:timer_conv_64	0	static
+timer-uclass.c:139:5:dm_timer_init	32	static

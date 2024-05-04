@@ -1,0 +1,4 @@
+fs_loader.c:232:12:fs_loader_of_to_plat	24	static
+fs_loader.c:259:12:fs_loader_probe	16	static
+fs_loader.c:214:5:request_firmware_into_buf	48	static
+fs_loader.c:304:5:get_fs_loader	16	static

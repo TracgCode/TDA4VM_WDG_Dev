@@ -1,0 +1,4 @@
+clk-gate2.c:42:12:clk_gate2_enable	0	static
+clk-gate2.c:58:12:clk_gate2_disable	8	static
+clk-gate2.c:77:14:clk_gate2_set_rate	8	static
+clk-gate2.c:94:13:clk_register_gate2	16	static

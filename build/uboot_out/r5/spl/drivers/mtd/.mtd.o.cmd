@@ -1,0 +1,1 @@
+cmd_spl/drivers/mtd/mtd.o := rm -f spl/drivers/mtd/mtd.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/mtd/mtd.o spl/drivers/mtd/mtdcore.o spl/drivers/mtd/mtd_uboot.o spl/drivers/mtd/mtd-uclass.o spl/drivers/mtd/cfi_flash.o spl/drivers/mtd/cfi_mtd.o spl/drivers/mtd/hbmc-am654.o

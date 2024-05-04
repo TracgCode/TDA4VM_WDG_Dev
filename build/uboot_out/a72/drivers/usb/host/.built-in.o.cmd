@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/built-in.o :=  rm -f drivers/usb/host/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/usb/host/built-in.o drivers/usb/host/usb-uclass.o drivers/usb/host/usb_bootdev.o drivers/usb/host/xhci.o drivers/usb/host/xhci-mem.o drivers/usb/host/xhci-ring.o

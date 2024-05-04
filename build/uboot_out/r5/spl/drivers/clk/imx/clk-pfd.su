@@ -1,0 +1,3 @@
+clk-pfd.c:57:22:clk_pfd_set_rate	32	static
+clk-pfd.c:43:22:clk_pfd_recalc_rate	24	static
+clk-pfd.c:83:13:imx_clk_pfd	24	static

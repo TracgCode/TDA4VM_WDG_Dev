@@ -1,0 +1,5 @@
+spl_spi.c:56:14:spl_spi_fit_read	8	static
+spl_spi.c:69:21:spl_spi_get_uboot_offs	0	static
+spl_spi.c:74:12:spl_spi_boot_bus	0	static
+spl_spi.c:79:12:spl_spi_boot_cs	0	static
+spl_spi.c:89:12:spl_spi_load_image	48	static

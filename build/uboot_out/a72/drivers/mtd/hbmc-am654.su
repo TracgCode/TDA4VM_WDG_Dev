@@ -1,0 +1,2 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/hbmc-am654.c:125:12:am654_hbmc_probe	192	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/mtd/hbmc-am654.c:120:12:am654_hbmc_bind	0	static

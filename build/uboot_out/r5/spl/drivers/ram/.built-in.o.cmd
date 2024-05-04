@@ -1,0 +1,1 @@
+cmd_spl/drivers/ram/built-in.o :=  rm -f spl/drivers/ram/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/ram/built-in.o spl/drivers/ram/ram-uclass.o spl/drivers/ram/k3-ddrss/built-in.o

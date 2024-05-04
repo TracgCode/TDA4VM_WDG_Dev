@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-k3/j721e/built-in.o :=  rm -f arch/arm/mach-k3/j721e/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT arch/arm/mach-k3/j721e/built-in.o arch/arm/mach-k3/j721e/clk-data.o arch/arm/mach-k3/j721e/dev-data.o

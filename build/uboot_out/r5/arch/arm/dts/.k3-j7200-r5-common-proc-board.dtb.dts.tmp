@@ -1,0 +1,4607 @@
+# 0 "arch/arm/dts/.k3-j7200-r5-common-proc-board.dtb.pre.tmp"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/include/linux/kconfig.h" 1
+
+
+
+# 1 "include/generated/autoconf.h" 1
+# 5 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/include/linux/kconfig.h" 2
+# 0 "<command-line>" 2
+# 1 "arch/arm/dts/.k3-j7200-r5-common-proc-board.dtb.pre.tmp"
+
+
+
+
+
+/dts-v1/;
+
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-som-p0.dtsi" 1
+
+
+
+
+
+/dts-v1/;
+
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200.dtsi" 1
+
+
+
+
+
+
+
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/include/dt-bindings/interrupt-controller/irq.h" 1
+# 9 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200.dtsi" 2
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/include/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 10 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200.dtsi" 2
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/include/dt-bindings/pinctrl/k3.h" 1
+# 11 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200.dtsi" 2
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/include/dt-bindings/soc/ti,sci_pm_domain.h" 1
+# 12 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200.dtsi" 2
+
+/ {
+ model = "Texas Instruments K3 J7200 SoC";
+ compatible = "ti,j7200";
+ interrupt-parent = <&gic500>;
+ #address-cells = <2>;
+ #size-cells = <2>;
+
+ aliases {
+  serial0 = &wkup_uart0;
+  serial1 = &mcu_uart0;
+  serial2 = &main_uart0;
+  serial3 = &main_uart1;
+  serial4 = &main_uart2;
+  serial5 = &main_uart3;
+  serial6 = &main_uart4;
+  serial7 = &main_uart5;
+  serial8 = &main_uart6;
+  serial9 = &main_uart7;
+  serial10 = &main_uart8;
+  serial11 = &main_uart9;
+ };
+
+ chosen { };
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  cpu-map {
+   cluster0: cluster0 {
+    core0 {
+     cpu = <&cpu0>;
+    };
+
+    core1 {
+     cpu = <&cpu1>;
+    };
+   };
+
+  };
+
+  cpu0: cpu@0 {
+   compatible = "arm,cortex-a72";
+   reg = <0x000>;
+   device_type = "cpu";
+   enable-method = "psci";
+   i-cache-size = <0xc000>;
+   i-cache-line-size = <64>;
+   i-cache-sets = <256>;
+   d-cache-size = <0x8000>;
+   d-cache-line-size = <64>;
+   d-cache-sets = <128>;
+   next-level-cache = <&L2_0>;
+  };
+
+  cpu1: cpu@1 {
+   compatible = "arm,cortex-a72";
+   reg = <0x001>;
+   device_type = "cpu";
+   enable-method = "psci";
+   i-cache-size = <0xc000>;
+   i-cache-line-size = <64>;
+   i-cache-sets = <256>;
+   d-cache-size = <0x8000>;
+   d-cache-line-size = <64>;
+   d-cache-sets = <128>;
+   next-level-cache = <&L2_0>;
+  };
+ };
+
+ L2_0: l2-cache0 {
+  compatible = "cache";
+  cache-level = <2>;
+  cache-size = <0x100000>;
+  cache-line-size = <64>;
+  cache-sets = <2048>;
+  next-level-cache = <&msmc_l3>;
+ };
+
+ msmc_l3: l3-cache0 {
+  compatible = "cache";
+  cache-level = <3>;
+ };
+
+ firmware {
+  optee {
+   compatible = "linaro,optee-tz";
+   method = "smc";
+  };
+
+  psci: psci {
+   compatible = "arm,psci-1.0";
+   method = "smc";
+  };
+ };
+
+ a72_timer0: timer-cl0-cpu0 {
+  compatible = "arm,armv8-timer";
+  interrupts = <1 13 8>,
+        <1 14 8>,
+        <1 11 8>,
+        <1 10 8>;
+ };
+
+ pmu: pmu {
+  compatible = "arm,cortex-a72-pmu";
+  interrupts = <1 7 4>;
+ };
+
+ cbass_main: bus@100000 {
+  compatible = "simple-bus";
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges = <0x00 0x00100000 0x00 0x00100000 0x00 0x00020000>,
+    <0x00 0x00600000 0x00 0x00600000 0x00 0x00031100>,
+    <0x00 0x00700000 0x00 0x00700000 0x00 0x00001000>,
+    <0x00 0x00a40000 0x00 0x00a40000 0x00 0x00000800>,
+    <0x00 0x01000000 0x00 0x01000000 0x00 0x0d000000>,
+    <0x00 0x30000000 0x00 0x30000000 0x00 0x0c400000>,
+    <0x00 0x70000000 0x00 0x70000000 0x00 0x00800000>,
+    <0x00 0x18000000 0x00 0x18000000 0x00 0x08000000>,
+    <0x41 0x00000000 0x41 0x00000000 0x01 0x00000000>,
+
+
+    <0x00 0x28380000 0x00 0x28380000 0x00 0x03880000>,
+    <0x00 0x40200000 0x00 0x40200000 0x00 0x00998400>,
+    <0x00 0x40f00000 0x00 0x40f00000 0x00 0x00020000>,
+    <0x00 0x41000000 0x00 0x41000000 0x00 0x00020000>,
+    <0x00 0x41400000 0x00 0x41400000 0x00 0x00020000>,
+    <0x00 0x41c00000 0x00 0x41c00000 0x00 0x00100000>,
+    <0x00 0x42040000 0x00 0x42040000 0x00 0x03ac2400>,
+    <0x00 0x45100000 0x00 0x45100000 0x00 0x00c24000>,
+    <0x00 0x46000000 0x00 0x46000000 0x00 0x00200000>,
+    <0x00 0x47000000 0x00 0x47000000 0x00 0x00068400>,
+    <0x00 0x50000000 0x00 0x50000000 0x00 0x10000000>,
+    <0x05 0x00000000 0x05 0x00000000 0x01 0x00000000>,
+    <0x07 0x00000000 0x07 0x00000000 0x01 0x00000000>;
+
+  cbass_mcu_wakeup: bus@28380000 {
+   compatible = "simple-bus";
+   #address-cells = <2>;
+   #size-cells = <2>;
+   ranges = <0x00 0x28380000 0x00 0x28380000 0x00 0x03880000>,
+     <0x00 0x40200000 0x00 0x40200000 0x00 0x00998400>,
+     <0x00 0x40f00000 0x00 0x40f00000 0x00 0x00020000>,
+     <0x00 0x41000000 0x00 0x41000000 0x00 0x00020000>,
+     <0x00 0x41400000 0x00 0x41400000 0x00 0x00020000>,
+     <0x00 0x41c00000 0x00 0x41c00000 0x00 0x00100000>,
+     <0x00 0x42040000 0x00 0x42040000 0x00 0x03ac2400>,
+     <0x00 0x45100000 0x00 0x45100000 0x00 0x00c24000>,
+     <0x00 0x46000000 0x00 0x46000000 0x00 0x00200000>,
+     <0x00 0x47000000 0x00 0x47000000 0x00 0x00068400>,
+     <0x00 0x50000000 0x00 0x50000000 0x00 0x10000000>,
+     <0x05 0x00000000 0x05 0x00000000 0x01 0x00000000>,
+     <0x07 0x00000000 0x07 0x00000000 0x01 0x00000000>;
+  };
+ };
+};
+
+
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-main.dtsi" 1
+
+
+
+
+
+
+
+/ {
+ serdes_refclk: serdes-refclk {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+ };
+};
+
+&cbass_main {
+ msmc_ram: sram@70000000 {
+  compatible = "mmio-sram";
+  reg = <0x00 0x70000000 0x00 0x100000>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0x00 0x00 0x70000000 0x100000>;
+
+  atf-sram@0 {
+   reg = <0x00 0x20000>;
+  };
+ };
+
+ scm_conf: scm-conf@100000 {
+  compatible = "ti,j721e-system-controller", "syscon", "simple-mfd";
+  reg = <0x00 0x00100000 0x00 0x1c000>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0x00 0x00 0x00100000 0x1c000>;
+
+  serdes_ln_ctrl: serdes-ln-ctrl@4080 {
+   compatible = "mmio-mux";
+   #mux-control-cells = <1>;
+   mux-reg-masks = <0x4080 0x3>, <0x4084 0x3>,
+     <0x4088 0x3>, <0x408c 0x3>;
+  };
+
+  usb_serdes_mux: mux-controller@4000 {
+   compatible = "mmio-mux";
+   #mux-control-cells = <1>;
+   mux-reg-masks = <0x4000 0x8000000>;
+  };
+ };
+
+ gic500: interrupt-controller@1800000 {
+  compatible = "arm,gic-v3";
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges;
+  #interrupt-cells = <3>;
+  interrupt-controller;
+  reg = <0x00 0x01800000 0x00 0x10000>,
+        <0x00 0x01900000 0x00 0x100000>;
+
+
+  interrupts = <1 9 4>;
+
+  gic_its: msi-controller@1820000 {
+   compatible = "arm,gic-v3-its";
+   reg = <0x00 0x01820000 0x00 0x10000>;
+   socionext,synquacer-pre-its = <0x1000000 0x400000>;
+   msi-controller;
+   #msi-cells = <1>;
+  };
+ };
+
+ main_gpio_intr: interrupt-controller@a00000 {
+  compatible = "ti,sci-intr";
+  reg = <0x00 0x00a00000 0x00 0x800>;
+  ti,intr-trigger-type = <1>;
+  interrupt-controller;
+  interrupt-parent = <&gic500>;
+  #interrupt-cells = <1>;
+  ti,sci = <&dmsc>;
+  ti,sci-dev-id = <131>;
+  ti,interrupt-ranges = <8 392 56>;
+ };
+
+ main_navss: bus@30000000 {
+  compatible = "simple-mfd";
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges = <0x00 0x30000000 0x00 0x30000000 0x00 0x0c400000>;
+  ti,sci-dev-id = <199>;
+  dma-coherent;
+  dma-ranges;
+
+  main_navss_intr: interrupt-controller@310e0000 {
+   compatible = "ti,sci-intr";
+   reg = <0x00 0x310e0000 0x00 0x4000>;
+   ti,intr-trigger-type = <4>;
+   interrupt-controller;
+   interrupt-parent = <&gic500>;
+   #interrupt-cells = <1>;
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <213>;
+   ti,interrupt-ranges = <0 64 64>,
+           <64 448 64>,
+           <128 672 64>;
+  };
+
+  main_udmass_inta: msi-controller@33d00000 {
+   compatible = "ti,sci-inta";
+   reg = <0x00 0x33d00000 0x00 0x100000>;
+   interrupt-controller;
+   #interrupt-cells = <0>;
+   interrupt-parent = <&main_navss_intr>;
+   msi-controller;
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <209>;
+   ti,interrupt-ranges = <0 0 256>;
+  };
+
+  secure_proxy_main: mailbox@32c00000 {
+   compatible = "ti,am654-secure-proxy";
+   #mbox-cells = <1>;
+   reg-names = "target_data", "rt", "scfg";
+   reg = <0x00 0x32c00000 0x00 0x100000>,
+         <0x00 0x32400000 0x00 0x100000>,
+         <0x00 0x32800000 0x00 0x100000>;
+   interrupt-names = "rx_011";
+   interrupts = <0 37 4>;
+  };
+
+  hwspinlock: spinlock@30e00000 {
+   compatible = "ti,am654-hwspinlock";
+   reg = <0x00 0x30e00000 0x00 0x1000>;
+   #hwlock-cells = <1>;
+  };
+
+  mailbox0_cluster0: mailbox@31f80000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f80000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster1: mailbox@31f81000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f81000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster2: mailbox@31f82000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f82000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster3: mailbox@31f83000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f83000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster4: mailbox@31f84000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f84000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster5: mailbox@31f85000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f85000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster6: mailbox@31f86000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f86000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster7: mailbox@31f87000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f87000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster8: mailbox@31f88000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f88000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster9: mailbox@31f89000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f89000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster10: mailbox@31f8a000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f8a000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  mailbox0_cluster11: mailbox@31f8b000 {
+   compatible = "ti,am654-mailbox";
+   reg = <0x00 0x31f8b000 0x00 0x200>;
+   #mbox-cells = <1>;
+   ti,mbox-num-users = <4>;
+   ti,mbox-num-fifos = <16>;
+   interrupt-parent = <&main_navss_intr>;
+  };
+
+  main_ringacc: ringacc@3c000000 {
+   compatible = "ti,am654-navss-ringacc";
+   reg = <0x00 0x3c000000 0x00 0x400000>,
+    <0x00 0x38000000 0x00 0x400000>,
+    <0x00 0x31120000 0x00 0x100>,
+    <0x00 0x33000000 0x00 0x40000>;
+   reg-names = "rt", "fifos", "proxy_gcfg", "proxy_target";
+   ti,num-rings = <1024>;
+   ti,sci-rm-range-gp-rings = <0x1>;
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <211>;
+   msi-parent = <&main_udmass_inta>;
+  };
+
+  main_udmap: dma-controller@31150000 {
+   compatible = "ti,j721e-navss-main-udmap";
+   reg = <0x00 0x31150000 0x00 0x100>,
+    <0x00 0x34000000 0x00 0x100000>,
+    <0x00 0x35000000 0x00 0x100000>;
+   reg-names = "gcfg", "rchanrt", "tchanrt";
+   msi-parent = <&main_udmass_inta>;
+   #dma-cells = <1>;
+
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <212>;
+   ti,ringacc = <&main_ringacc>;
+
+   ti,sci-rm-range-tchan = <0x0d>,
+      <0x0f>,
+      <0x10>;
+   ti,sci-rm-range-rchan = <0x0a>,
+      <0x0b>,
+      <0x0c>;
+   ti,sci-rm-range-rflow = <0x00>;
+  };
+
+  cpts@310d0000 {
+   compatible = "ti,j721e-cpts";
+   reg = <0x00 0x310d0000 0x00 0x400>;
+   reg-names = "cpts";
+   clocks = <&k3_clks 201 1>;
+   clock-names = "cpts";
+   interrupts-extended = <&main_navss_intr 391>;
+   interrupt-names = "cpts";
+   ti,cpts-periodic-outputs = <6>;
+   ti,cpts-ext-ts-inputs = <8>;
+  };
+ };
+
+ main_pmx0: pinctrl@11c000 {
+  compatible = "pinctrl-single";
+
+  reg = <0x00 0x11c000 0x00 0x2b4>;
+  #pinctrl-cells = <1>;
+  pinctrl-single,register-width = <32>;
+  pinctrl-single,function-mask = <0xffffffff>;
+ };
+
+ main_uart0: serial@2800000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02800000 0x00 0x100>;
+  interrupts = <0 192 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 146 1>;
+  clocks = <&k3_clks 146 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart1: serial@2810000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02810000 0x00 0x100>;
+  interrupts = <0 193 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 278 1>;
+  clocks = <&k3_clks 278 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart2: serial@2820000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02820000 0x00 0x100>;
+  interrupts = <0 194 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 279 1>;
+  clocks = <&k3_clks 279 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart3: serial@2830000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02830000 0x00 0x100>;
+  interrupts = <0 195 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 280 1>;
+  clocks = <&k3_clks 280 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart4: serial@2840000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02840000 0x00 0x100>;
+  interrupts = <0 196 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 281 1>;
+  clocks = <&k3_clks 281 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart5: serial@2850000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02850000 0x00 0x100>;
+  interrupts = <0 197 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 282 1>;
+  clocks = <&k3_clks 282 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart6: serial@2860000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02860000 0x00 0x100>;
+  interrupts = <0 198 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 283 1>;
+  clocks = <&k3_clks 283 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart7: serial@2870000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02870000 0x00 0x100>;
+  interrupts = <0 199 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 284 1>;
+  clocks = <&k3_clks 284 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart8: serial@2880000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02880000 0x00 0x100>;
+  interrupts = <0 248 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 285 1>;
+  clocks = <&k3_clks 285 2>;
+  clock-names = "fclk";
+ };
+
+ main_uart9: serial@2890000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x02890000 0x00 0x100>;
+  interrupts = <0 249 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 286 1>;
+  clocks = <&k3_clks 286 2>;
+  clock-names = "fclk";
+ };
+
+ main_i2c0: i2c@2000000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x2000000 0x00 0x100>;
+  interrupts = <0 200 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 187 1>;
+  power-domains = <&k3_pds 187 0>;
+ };
+
+ main_i2c1: i2c@2010000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x2010000 0x00 0x100>;
+  interrupts = <0 201 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 188 1>;
+  power-domains = <&k3_pds 188 1>;
+ };
+
+ main_i2c2: i2c@2020000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x2020000 0x00 0x100>;
+  interrupts = <0 202 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 189 1>;
+  power-domains = <&k3_pds 189 1>;
+ };
+
+ main_i2c3: i2c@2030000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x2030000 0x00 0x100>;
+  interrupts = <0 203 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 190 1>;
+  power-domains = <&k3_pds 190 1>;
+ };
+
+ main_i2c4: i2c@2040000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x2040000 0x00 0x100>;
+  interrupts = <0 204 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 191 1>;
+  power-domains = <&k3_pds 191 1>;
+ };
+
+ main_i2c5: i2c@2050000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x2050000 0x00 0x100>;
+  interrupts = <0 205 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 192 1>;
+  power-domains = <&k3_pds 192 1>;
+ };
+
+ main_i2c6: i2c@2060000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x2060000 0x00 0x100>;
+  interrupts = <0 206 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 193 1>;
+  power-domains = <&k3_pds 193 1>;
+ };
+
+ main_sdhci0: mmc@4f80000 {
+  compatible = "ti,j7200-sdhci-8bit", "ti,j721e-sdhci-8bit";
+  reg = <0x00 0x04f80000 0x00 0x260>, <0x00 0x4f88000 0x00 0x134>;
+  interrupts = <0 3 4>;
+  power-domains = <&k3_pds 91 1>;
+  clock-names = "clk_ahb", "clk_xin";
+  clocks = <&k3_clks 91 0>, <&k3_clks 91 3>;
+  ti,otap-del-sel-legacy = <0x0>;
+  ti,otap-del-sel-mmc-hs = <0x0>;
+  ti,otap-del-sel-ddr52 = <0x6>;
+  ti,otap-del-sel-hs200 = <0x8>;
+  ti,otap-del-sel-hs400 = <0x5>;
+  ti,itap-del-sel-legacy = <0x10>;
+  ti,itap-del-sel-mmc-hs = <0xa>;
+  ti,strobe-sel = <0x77>;
+  ti,clkbuf-sel = <0x7>;
+  ti,trm-icp = <0x8>;
+  bus-width = <8>;
+  mmc-ddr-1_8v;
+  mmc-hs200-1_8v;
+  mmc-hs400-1_8v;
+  dma-coherent;
+ };
+
+ main_sdhci1: mmc@4fb0000 {
+  compatible = "ti,j7200-sdhci-4bit", "ti,j721e-sdhci-4bit";
+  reg = <0x00 0x04fb0000 0x00 0x260>, <0x00 0x4fb8000 0x00 0x134>;
+  interrupts = <0 4 4>;
+  power-domains = <&k3_pds 92 1>;
+  clock-names = "clk_ahb", "clk_xin";
+  clocks = <&k3_clks 92 1>, <&k3_clks 92 2>;
+  ti,otap-del-sel-legacy = <0x0>;
+  ti,otap-del-sel-sd-hs = <0x0>;
+  ti,otap-del-sel-sdr12 = <0xf>;
+  ti,otap-del-sel-sdr25 = <0xf>;
+  ti,otap-del-sel-sdr50 = <0xc>;
+  ti,otap-del-sel-sdr104 = <0x5>;
+  ti,otap-del-sel-ddr50 = <0xc>;
+  ti,itap-del-sel-legacy = <0x0>;
+  ti,itap-del-sel-sd-hs = <0x0>;
+  ti,itap-del-sel-sdr12 = <0x0>;
+  ti,itap-del-sel-sdr25 = <0x0>;
+  ti,clkbuf-sel = <0x7>;
+  ti,trm-icp = <0x8>;
+  dma-coherent;
+ };
+
+ serdes_wiz0: wiz@5060000 {
+  compatible = "ti,j721e-wiz-10g";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  power-domains = <&k3_pds 292 1>;
+  clocks = <&k3_clks 292 11>, <&k3_clks 292 85>, <&serdes_refclk>;
+  clock-names = "fck", "core_ref_clk", "ext_ref_clk";
+  num-lanes = <4>;
+  #reset-cells = <1>;
+  ranges = <0x5060000 0x0 0x5060000 0x10000>;
+
+  assigned-clocks = <&k3_clks 292 85>;
+  assigned-clock-parents = <&k3_clks 292 89>;
+
+  wiz0_pll0_refclk: pll0-refclk {
+   clocks = <&k3_clks 292 85>, <&serdes_refclk>;
+   clock-output-names = "wiz0_pll0_refclk";
+   #clock-cells = <0>;
+   assigned-clocks = <&wiz0_pll0_refclk>;
+   assigned-clock-parents = <&k3_clks 292 85>;
+  };
+
+  wiz0_pll1_refclk: pll1-refclk {
+   clocks = <&k3_clks 292 85>, <&serdes_refclk>;
+   clock-output-names = "wiz0_pll1_refclk";
+   #clock-cells = <0>;
+   assigned-clocks = <&wiz0_pll1_refclk>;
+   assigned-clock-parents = <&k3_clks 292 85>;
+  };
+
+  wiz0_refclk_dig: refclk-dig {
+   clocks = <&k3_clks 292 85>, <&serdes_refclk>;
+   clock-output-names = "wiz0_refclk_dig";
+   #clock-cells = <0>;
+   assigned-clocks = <&wiz0_refclk_dig>;
+   assigned-clock-parents = <&k3_clks 292 85>;
+  };
+
+  wiz0_cmn_refclk_dig_div: cmn-refclk-dig-div {
+   clocks = <&wiz0_refclk_dig>;
+   #clock-cells = <0>;
+  };
+
+  serdes0: serdes@5060000 {
+   compatible = "ti,j721e-serdes-10g";
+   reg = <0x05060000 0x00010000>;
+   reg-names = "torrent_phy";
+   resets = <&serdes_wiz0 0>;
+   reset-names = "torrent_reset";
+   clocks = <&wiz0_pll0_refclk>;
+   clock-names = "refclk";
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+ };
+
+ pcie1_rc: pcie@2910000 {
+  compatible = "ti,j7200-pcie-host", "ti,j721e-pcie-host";
+  reg = <0x00 0x02910000 0x00 0x1000>,
+        <0x00 0x02917000 0x00 0x400>,
+        <0x00 0x0d800000 0x00 0x00800000>,
+        <0x00 0x18000000 0x00 0x00001000>;
+  reg-names = "intd_cfg", "user_cfg", "reg", "cfg";
+  interrupt-names = "link_state";
+  interrupts = <0 330 1>;
+  device_type = "pci";
+  ti,syscon-pcie-ctrl = <&scm_conf 0x4074>;
+  max-link-speed = <3>;
+  num-lanes = <4>;
+  power-domains = <&k3_pds 240 1>;
+  clocks = <&k3_clks 240 6>;
+  clock-names = "fck";
+  #address-cells = <3>;
+  #size-cells = <2>;
+  bus-range = <0x0 0xf>;
+  cdns,no-bar-match-nbits = <64>;
+  vendor-id = /bits/ 16 <0x104c>;
+  device-id = /bits/ 16 <0xb00f>;
+  msi-map = <0x0 &gic_its 0x0 0x10000>;
+  dma-coherent;
+  ranges = <0x01000000 0x0 0x18001000 0x00 0x18001000 0x0 0x0010000>,
+    <0x02000000 0x0 0x18011000 0x00 0x18011000 0x0 0x7fef000>;
+  dma-ranges = <0x02000000 0x0 0x0 0x0 0x0 0x10000 0x0>;
+ };
+
+ pcie1_ep: pcie-ep@2910000 {
+  compatible = "ti,j7200-pcie-ep", "ti,j721e-pcie-ep";
+  reg = <0x00 0x02910000 0x00 0x1000>,
+        <0x00 0x02917000 0x00 0x400>,
+        <0x00 0x0d800000 0x00 0x00800000>,
+        <0x00 0x18000000 0x00 0x08000000>;
+  reg-names = "intd_cfg", "user_cfg", "reg", "mem";
+  interrupt-names = "link_state";
+  interrupts = <0 330 1>;
+  ti,syscon-pcie-ctrl = <&scm_conf 0x4074>;
+  max-link-speed = <3>;
+  num-lanes = <4>;
+  power-domains = <&k3_pds 240 1>;
+  clocks = <&k3_clks 240 6>;
+  clock-names = "fck";
+  max-functions = /bits/ 8 <6>;
+  dma-coherent;
+ };
+
+ usbss0: cdns-usb@4104000 {
+  compatible = "ti,j721e-usb";
+  reg = <0x00 0x4104000 0x00 0x100>;
+  dma-coherent;
+  power-domains = <&k3_pds 288 1>;
+  clocks = <&k3_clks 288 12>, <&k3_clks 288 3>;
+  clock-names = "ref", "lpm";
+  assigned-clocks = <&k3_clks 288 12>;
+  assigned-clock-parents = <&k3_clks 288 13>;
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges;
+
+  usb0: usb@6000000 {
+   compatible = "cdns,usb3";
+   reg = <0x00 0x6000000 0x00 0x10000>,
+         <0x00 0x6010000 0x00 0x10000>,
+         <0x00 0x6020000 0x00 0x10000>;
+   reg-names = "otg", "xhci", "dev";
+   interrupts = <0 96 4>,
+         <0 102 4>,
+         <0 120 4>;
+   interrupt-names = "host",
+       "peripheral",
+       "otg";
+   maximum-speed = "super-speed";
+   dr_mode = "otg";
+   cdns,phyrst-a-enable;
+  };
+ };
+
+ main_gpio0: gpio@600000 {
+  compatible = "ti,j721e-gpio", "ti,keystone-gpio";
+  reg = <0x00 0x00600000 0x00 0x100>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&main_gpio_intr>;
+  interrupts = <145>, <146>, <147>, <148>,
+        <149>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  ti,ngpio = <69>;
+  ti,davinci-gpio-unbanked = <0>;
+  power-domains = <&k3_pds 105 1>;
+  clocks = <&k3_clks 105 0>;
+  clock-names = "gpio";
+ };
+
+ main_gpio2: gpio@610000 {
+  compatible = "ti,j721e-gpio", "ti,keystone-gpio";
+  reg = <0x00 0x00610000 0x00 0x100>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&main_gpio_intr>;
+  interrupts = <154>, <155>, <156>, <157>,
+        <158>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  ti,ngpio = <69>;
+  ti,davinci-gpio-unbanked = <0>;
+  power-domains = <&k3_pds 107 1>;
+  clocks = <&k3_clks 107 0>;
+  clock-names = "gpio";
+ };
+
+ main_gpio4: gpio@620000 {
+  compatible = "ti,j721e-gpio", "ti,keystone-gpio";
+  reg = <0x00 0x00620000 0x00 0x100>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&main_gpio_intr>;
+  interrupts = <163>, <164>, <165>, <166>,
+        <167>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  ti,ngpio = <69>;
+  ti,davinci-gpio-unbanked = <0>;
+  power-domains = <&k3_pds 109 1>;
+  clocks = <&k3_clks 109 0>;
+  clock-names = "gpio";
+ };
+
+ main_gpio6: gpio@630000 {
+  compatible = "ti,j721e-gpio", "ti,keystone-gpio";
+  reg = <0x00 0x00630000 0x00 0x100>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&main_gpio_intr>;
+  interrupts = <172>, <173>, <174>, <175>,
+        <176>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  ti,ngpio = <69>;
+  ti,davinci-gpio-unbanked = <0>;
+  power-domains = <&k3_pds 111 1>;
+  clocks = <&k3_clks 111 0>;
+  clock-names = "gpio";
+ };
+
+ main_r5fss0: r5fss@5c00000 {
+  compatible = "ti,j7200-r5fss";
+  ti,cluster-mode = <1>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0x5c00000 0x00 0x5c00000 0x20000>,
+    <0x5d00000 0x00 0x5d00000 0x20000>;
+  power-domains = <&k3_pds 243 1>;
+
+  main_r5fss0_core0: r5f@5c00000 {
+   compatible = "ti,j7200-r5f";
+   reg = <0x5c00000 0x00010000>,
+         <0x5c10000 0x00010000>;
+   reg-names = "atcm", "btcm";
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <245>;
+   ti,sci-proc-ids = <0x06 0xff>;
+   resets = <&k3_reset 245 1>;
+   firmware-name = "j7200-main-r5f0_0-fw";
+   ti,atcm-enable = <1>;
+   ti,btcm-enable = <1>;
+   ti,loczrama = <1>;
+  };
+
+  main_r5fss0_core1: r5f@5d00000 {
+   compatible = "ti,j7200-r5f";
+   reg = <0x5d00000 0x00008000>,
+         <0x5d10000 0x00008000>;
+   reg-names = "atcm", "btcm";
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <246>;
+   ti,sci-proc-ids = <0x07 0xff>;
+   resets = <&k3_reset 246 1>;
+   firmware-name = "j7200-main-r5f0_1-fw";
+   ti,atcm-enable = <1>;
+   ti,btcm-enable = <1>;
+   ti,loczrama = <1>;
+  };
+ };
+
+ main_esm: esm@700000 {
+  compatible = "ti,j721e-esm";
+  reg = <0x0 0x700000 0x0 0x1000>;
+  ti,esm-pins = <656>, <657>;
+  bootph-pre-ram;
+ };
+};
+# 173 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200.dtsi" 2
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-mcu-wakeup.dtsi" 1
+
+
+
+
+
+
+
+&cbass_mcu_wakeup {
+ dmsc: system-controller@44083000 {
+  compatible = "ti,k2g-sci";
+  ti,host-id = <12>;
+
+  mbox-names = "rx", "tx";
+
+  mboxes= <&secure_proxy_main 11>,
+   <&secure_proxy_main 13>;
+
+  reg-names = "debug_messages";
+  reg = <0x00 0x44083000 0x00 0x1000>;
+
+  k3_pds: power-controller {
+   compatible = "ti,sci-pm-domain";
+   #power-domain-cells = <2>;
+  };
+
+  k3_clks: clock-controller {
+   compatible = "ti,k2g-sci-clk";
+   #clock-cells = <2>;
+  };
+
+  k3_reset: reset-controller {
+   compatible = "ti,sci-reset";
+   #reset-cells = <2>;
+  };
+ };
+
+ mcu_conf: syscon@40f00000 {
+  compatible = "syscon", "simple-mfd";
+  reg = <0x00 0x40f00000 0x00 0x20000>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0x00 0x00 0x40f00000 0x20000>;
+
+  phy_gmii_sel: phy@4040 {
+   compatible = "ti,am654-phy-gmii-sel";
+   reg = <0x4040 0x4>;
+   #phy-cells = <1>;
+  };
+ };
+
+ chipid@43000014 {
+  compatible = "ti,am654-chipid";
+  reg = <0x00 0x43000014 0x00 0x4>;
+ };
+
+ wkup_pmx0: pinctrl@4301c000 {
+  compatible = "pinctrl-single";
+
+  reg = <0x00 0x4301c000 0x00 0x178>;
+  #pinctrl-cells = <1>;
+  pinctrl-single,register-width = <32>;
+  pinctrl-single,function-mask = <0xffffffff>;
+ };
+
+ mcu_ram: sram@41c00000 {
+  compatible = "mmio-sram";
+  reg = <0x00 0x41c00000 0x00 0x100000>;
+  ranges = <0x00 0x00 0x41c00000 0x100000>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+ };
+
+ wkup_uart0: serial@42300000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x42300000 0x00 0x100>;
+  interrupts = <0 897 4>;
+  clock-frequency = <48000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 287 1>;
+  clocks = <&k3_clks 287 2>;
+  clock-names = "fclk";
+ };
+
+ mcu_uart0: serial@40a00000 {
+  compatible = "ti,j721e-uart", "ti,am654-uart";
+  reg = <0x00 0x40a00000 0x00 0x100>;
+  interrupts = <0 846 4>;
+  clock-frequency = <96000000>;
+  current-speed = <115200>;
+  power-domains = <&k3_pds 149 1>;
+  clocks = <&k3_clks 149 2>;
+  clock-names = "fclk";
+ };
+
+ wkup_gpio_intr: interrupt-controller@42200000 {
+  compatible = "ti,sci-intr";
+  reg = <0x00 0x42200000 0x00 0x400>;
+  ti,intr-trigger-type = <1>;
+  interrupt-controller;
+  interrupt-parent = <&gic500>;
+  #interrupt-cells = <1>;
+  ti,sci = <&dmsc>;
+  ti,sci-dev-id = <137>;
+  ti,interrupt-ranges = <16 960 16>;
+ };
+
+ wkup_gpio0: gpio@42110000 {
+  compatible = "ti,j721e-gpio", "ti,keystone-gpio";
+  reg = <0x00 0x42110000 0x00 0x100>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&wkup_gpio_intr>;
+  interrupts = <103>, <104>, <105>, <106>, <107>, <108>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  ti,ngpio = <85>;
+  ti,davinci-gpio-unbanked = <0>;
+  power-domains = <&k3_pds 113 1>;
+  clocks = <&k3_clks 113 0>;
+  clock-names = "gpio";
+ };
+
+ wkup_gpio1: gpio@42100000 {
+  compatible = "ti,j721e-gpio", "ti,keystone-gpio";
+  reg = <0x00 0x42100000 0x00 0x100>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  interrupt-parent = <&wkup_gpio_intr>;
+  interrupts = <112>, <113>, <114>, <115>, <116>, <117>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  ti,ngpio = <85>;
+  ti,davinci-gpio-unbanked = <0>;
+  power-domains = <&k3_pds 114 1>;
+  clocks = <&k3_clks 114 0>;
+  clock-names = "gpio";
+ };
+
+ mcu_navss: bus@28380000 {
+  compatible = "simple-mfd";
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges = <0x00 0x28380000 0x00 0x28380000 0x00 0x03880000>;
+  dma-coherent;
+  dma-ranges;
+  ti,sci-dev-id = <232>;
+
+  mcu_ringacc: ringacc@2b800000 {
+   compatible = "ti,am654-navss-ringacc";
+   reg = <0x00 0x2b800000 0x00 0x400000>,
+    <0x00 0x2b000000 0x00 0x400000>,
+    <0x00 0x28590000 0x00 0x100>,
+    <0x00 0x2a500000 0x00 0x40000>;
+   reg-names = "rt", "fifos", "proxy_gcfg", "proxy_target";
+   ti,num-rings = <286>;
+   ti,sci-rm-range-gp-rings = <0x1>;
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <235>;
+   msi-parent = <&main_udmass_inta>;
+  };
+
+  mcu_udmap: dma-controller@285c0000 {
+   compatible = "ti,j721e-navss-mcu-udmap";
+   reg = <0x00 0x285c0000 0x00 0x100>,
+    <0x00 0x2a800000 0x00 0x40000>,
+    <0x00 0x2aa00000 0x00 0x40000>;
+   reg-names = "gcfg", "rchanrt", "tchanrt";
+   msi-parent = <&main_udmass_inta>;
+   #dma-cells = <1>;
+
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <236>;
+   ti,ringacc = <&mcu_ringacc>;
+
+   ti,sci-rm-range-tchan = <0x0d>,
+      <0x0f>;
+   ti,sci-rm-range-rchan = <0x0a>,
+      <0x0b>;
+   ti,sci-rm-range-rflow = <0x00>;
+  };
+ };
+
+ mcu_cpsw: ethernet@46000000 {
+  compatible = "ti,j721e-cpsw-nuss";
+  #address-cells = <2>;
+  #size-cells = <2>;
+  reg = <0x00 0x46000000 0x00 0x200000>;
+  reg-names = "cpsw_nuss";
+  ranges = <0x00 0x00 0x00 0x46000000 0x00 0x200000>;
+  dma-coherent;
+  clocks = <&k3_clks 18 21>;
+  clock-names = "fck";
+  power-domains = <&k3_pds 18 1>;
+
+  dmas = <&mcu_udmap 0xf000>,
+         <&mcu_udmap 0xf001>,
+         <&mcu_udmap 0xf002>,
+         <&mcu_udmap 0xf003>,
+         <&mcu_udmap 0xf004>,
+         <&mcu_udmap 0xf005>,
+         <&mcu_udmap 0xf006>,
+         <&mcu_udmap 0xf007>,
+         <&mcu_udmap 0x7000>;
+  dma-names = "tx0", "tx1", "tx2", "tx3",
+       "tx4", "tx5", "tx6", "tx7",
+       "rx";
+
+  ethernet-ports {
+   #address-cells = <1>;
+   #size-cells = <0>;
+
+   cpsw_port1: port@1 {
+    reg = <1>;
+    ti,mac-only;
+    label = "port1";
+    ti,syscon-efuse = <&mcu_conf 0x200>;
+    phys = <&phy_gmii_sel 1>;
+   };
+  };
+
+  davinci_mdio: mdio@f00 {
+   compatible = "ti,cpsw-mdio","ti,davinci_mdio";
+   reg = <0x00 0xf00 0x00 0x100>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   clocks = <&k3_clks 18 21>;
+   clock-names = "fck";
+   bus_freq = <1000000>;
+  };
+
+  cpts@3d000 {
+   compatible = "ti,am65-cpts";
+   reg = <0x00 0x3d000 0x00 0x400>;
+   clocks = <&k3_clks 18 2>;
+   clock-names = "cpts";
+   interrupts-extended = <&gic500 0 858 4>;
+   interrupt-names = "cpts";
+   ti,cpts-ext-ts-inputs = <4>;
+   ti,cpts-periodic-outputs = <2>;
+  };
+ };
+
+ mcu_i2c0: i2c@40b00000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x40b00000 0x00 0x100>;
+  interrupts = <0 852 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 194 1>;
+  power-domains = <&k3_pds 194 1>;
+ };
+
+ mcu_i2c1: i2c@40b10000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x40b10000 0x00 0x100>;
+  interrupts = <0 853 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 195 1>;
+  power-domains = <&k3_pds 195 1>;
+ };
+
+ wkup_i2c0: i2c@42120000 {
+  compatible = "ti,j721e-i2c", "ti,omap4-i2c";
+  reg = <0x00 0x42120000 0x00 0x100>;
+  interrupts = <0 896 4>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  clock-names = "fck";
+  clocks = <&k3_clks 197 1>;
+  power-domains = <&k3_pds 197 0>;
+ };
+
+ fss: syscon@47000000 {
+  compatible = "syscon", "simple-mfd";
+  reg = <0x00 0x47000000 0x00 0x100>;
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges;
+
+  hbmc_mux: hbmc-mux {
+   compatible = "mmio-mux";
+   #mux-control-cells = <1>;
+   mux-reg-masks = <0x4 0x2>;
+  };
+
+  hbmc: hyperbus@47034000 {
+   compatible = "ti,am654-hbmc";
+   reg = <0x00 0x47030000 0x00 0xc>,
+    <0x00 0x47034000 0x00 0x100>,
+    <0x05 0x00000000 0x01 0x0000000>;
+   power-domains = <&k3_pds 102 1>;
+   clocks = <&k3_clks 102 0>;
+   assigned-clocks = <&k3_clks 102 5>;
+   assigned-clock-rates = <333333333>;
+   #address-cells = <2>;
+   #size-cells = <1>;
+   mux-controls = <&hbmc_mux 0>;
+  };
+
+  ospi0: spi@47040000 {
+   compatible = "ti,am654-ospi", "cdns,qspi-nor";
+   reg = <0x0 0x47040000 0x0 0x100>,
+         <0x5 0x00000000 0x1 0x0000000>;
+   interrupts = <0 840 4>;
+   cdns,fifo-depth = <256>;
+   cdns,fifo-width = <4>;
+   cdns,trigger-address = <0x0>;
+   clocks = <&k3_clks 103 0>;
+   assigned-clocks = <&k3_clks 103 0>;
+   assigned-clock-parents = <&k3_clks 103 2>;
+   assigned-clock-rates = <166666666>;
+   power-domains = <&k3_pds 103 1>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+  };
+ };
+
+ tscadc0: tscadc@40200000 {
+  compatible = "ti,am3359-tscadc";
+  reg = <0x00 0x40200000 0x00 0x1000>;
+  interrupts = <0 860 4>;
+  power-domains = <&k3_pds 0 1>;
+  clocks = <&k3_clks 0 1>;
+  assigned-clocks = <&k3_clks 0 3>;
+  assigned-clock-rates = <60000000>;
+  clock-names = "adc_tsc_fck";
+  dmas = <&main_udmap 0x7400>,
+   <&main_udmap 0x7401>;
+  dma-names = "fifo0", "fifo1";
+
+  adc {
+   #io-channel-cells = <1>;
+   compatible = "ti,am3359-adc";
+  };
+ };
+
+ mcu_r5fss0: r5fss@41000000 {
+  compatible = "ti,j7200-r5fss";
+  ti,cluster-mode = <1>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0x41000000 0x00 0x41000000 0x20000>,
+    <0x41400000 0x00 0x41400000 0x20000>;
+  power-domains = <&k3_pds 249 1>;
+
+  mcu_r5fss0_core0: r5f@41000000 {
+   compatible = "ti,j7200-r5f";
+   reg = <0x41000000 0x00010000>,
+         <0x41010000 0x00010000>;
+   reg-names = "atcm", "btcm";
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <250>;
+   ti,sci-proc-ids = <0x01 0xff>;
+   resets = <&k3_reset 250 1>;
+   firmware-name = "j7200-mcu-r5f0_0-fw";
+   ti,atcm-enable = <1>;
+   ti,btcm-enable = <1>;
+   ti,loczrama = <1>;
+  };
+
+  mcu_r5fss0_core1: r5f@41400000 {
+   compatible = "ti,j7200-r5f";
+   reg = <0x41400000 0x00008000>,
+         <0x41410000 0x00008000>;
+   reg-names = "atcm", "btcm";
+   ti,sci = <&dmsc>;
+   ti,sci-dev-id = <251>;
+   ti,sci-proc-ids = <0x02 0xff>;
+   resets = <&k3_reset 251 1>;
+   firmware-name = "j7200-mcu-r5f0_1-fw";
+   ti,atcm-enable = <1>;
+   ti,btcm-enable = <1>;
+   ti,loczrama = <1>;
+  };
+ };
+};
+# 174 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200.dtsi" 2
+# 9 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-som-p0.dtsi" 2
+
+/ {
+ memory@80000000 {
+  device_type = "memory";
+
+  reg = <0x00 0x80000000 0x00 0x80000000>,
+        <0x08 0x80000000 0x00 0x80000000>;
+ };
+
+ reserved_memory: reserved-memory {
+  #address-cells = <2>;
+  #size-cells = <2>;
+  ranges;
+
+  secure_ddr: optee@9e800000 {
+   reg = <0x00 0x9e800000 0x00 0x01800000>;
+   alignment = <0x1000>;
+   no-map;
+  };
+
+  mcu_r5fss0_core0_dma_memory_region: r5f-dma-memory@a0000000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa0000000 0x00 0x100000>;
+   no-map;
+  };
+
+  mcu_r5fss0_core0_memory_region: r5f-memory@a0100000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa0100000 0x00 0xf00000>;
+   no-map;
+  };
+
+  mcu_r5fss0_core1_dma_memory_region: r5f-dma-memory@a1000000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa1000000 0x00 0x100000>;
+   no-map;
+  };
+
+  mcu_r5fss0_core1_memory_region: r5f-memory@a1100000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa1100000 0x00 0xf00000>;
+   no-map;
+  };
+
+  main_r5fss0_core0_dma_memory_region: r5f-dma-memory@a2000000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa2000000 0x00 0x100000>;
+   no-map;
+  };
+
+  main_r5fss0_core0_memory_region: r5f-memory@a2100000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa2100000 0x00 0xf00000>;
+   no-map;
+  };
+
+  main_r5fss0_core1_dma_memory_region: r5f-dma-memory@a3000000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa3000000 0x00 0x100000>;
+   no-map;
+  };
+
+  main_r5fss0_core1_memory_region: r5f-memory@a3100000 {
+   compatible = "shared-dma-pool";
+   reg = <0x00 0xa3100000 0x00 0xf00000>;
+   no-map;
+  };
+
+  rtos_ipc_memory_region: ipc-memories@a4000000 {
+   reg = <0x00 0xa4000000 0x00 0x00800000>;
+   alignment = <0x1000>;
+   no-map;
+  };
+ };
+};
+
+&wkup_pmx0 {
+ mcu_fss0_hpb0_pins_default: mcu-fss0-hpb0-pins-default {
+  pinctrl-single,pins = <
+   (((0x0) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (1))
+   (((0x4) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (1))
+   (((0x2c) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (1))
+   (((0x30) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (1))
+   (((0x8) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0xc) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0x10) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0x14) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0x18) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0x1c) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0x20) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0x24) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+   (((0x28) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (1))
+  >;
+ };
+
+ mcu_fss0_ospi0_pins_default: mcu-fss0-ospi0-pins-default {
+  pinctrl-single,pins = <
+   (((0x0000) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (0))
+   (((0x002c) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (0))
+   (((0x000c) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x0010) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x0014) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x0018) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x001c) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x0020) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x0024) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x0028) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x0008) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+  >;
+ };
+};
+
+&main_pmx0 {
+ main_i2c0_pins_default: main-i2c0-pins-default {
+  pinctrl-single,pins = <
+   (((0xd4) & 0x1fff)) ((((1 << (18)) | (1 << (17) | (0 << (16))))) | (0))
+   (((0xd8) & 0x1fff)) ((((1 << (18)) | (1 << (17) | (0 << (16))))) | (0))
+  >;
+ };
+};
+
+&hbmc {
+
+
+
+ status = "disabled";
+ pinctrl-names = "default";
+ pinctrl-0 = <&mcu_fss0_hpb0_pins_default>;
+ ranges = <0x00 0x00 0x05 0x00000000 0x4000000>,
+   <0x01 0x00 0x05 0x04000000 0x800000>;
+
+ flash@0,0 {
+  compatible = "cypress,hyperflash", "cfi-flash";
+  reg = <0x00 0x00 0x4000000>;
+
+  partitions {
+   compatible = "fixed-partitions";
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   partition@0 {
+    label = "hbmc.tiboot3";
+    reg = <0x0 0x100000>;
+   };
+
+   partition@100000 {
+    label = "hbmc.tispl";
+    reg = <0x100000 0x200000>;
+   };
+
+   partition@300000 {
+    label = "hbmc.u-boot";
+    reg = <0x300000 0x400000>;
+   };
+
+   partition@700000 {
+    label = "hbmc.env";
+    reg = <0x700000 0x40000>;
+   };
+
+   partition@800000 {
+    label = "hbmc.rootfs";
+    reg = <0x800000 0x3800000>;
+   };
+  };
+ };
+};
+
+&mailbox0_cluster0 {
+ interrupts = <436>;
+
+ mbox_mcu_r5fss0_core0: mbox-mcu-r5fss0-core0 {
+  ti,mbox-rx = <0 0 0>;
+  ti,mbox-tx = <1 0 0>;
+ };
+
+ mbox_mcu_r5fss0_core1: mbox-mcu-r5fss0-core1 {
+  ti,mbox-rx = <2 0 0>;
+  ti,mbox-tx = <3 0 0>;
+ };
+};
+
+&mailbox0_cluster1 {
+ interrupts = <432>;
+
+ mbox_main_r5fss0_core0: mbox-main-r5fss0-core0 {
+  ti,mbox-rx = <0 0 0>;
+  ti,mbox-tx = <1 0 0>;
+ };
+
+ mbox_main_r5fss0_core1: mbox-main-r5fss0-core1 {
+  ti,mbox-rx = <2 0 0>;
+  ti,mbox-tx = <3 0 0>;
+ };
+};
+
+&mailbox0_cluster2 {
+ status = "disabled";
+};
+
+&mailbox0_cluster3 {
+ status = "disabled";
+};
+
+&mailbox0_cluster4 {
+ status = "disabled";
+};
+
+&mailbox0_cluster5 {
+ status = "disabled";
+};
+
+&mailbox0_cluster6 {
+ status = "disabled";
+};
+
+&mailbox0_cluster7 {
+ status = "disabled";
+};
+
+&mailbox0_cluster8 {
+ status = "disabled";
+};
+
+&mailbox0_cluster9 {
+ status = "disabled";
+};
+
+&mailbox0_cluster10 {
+ status = "disabled";
+};
+
+&mailbox0_cluster11 {
+ status = "disabled";
+};
+
+&mcu_r5fss0_core0 {
+ mboxes = <&mailbox0_cluster0 &mbox_mcu_r5fss0_core0>;
+ memory-region = <&mcu_r5fss0_core0_dma_memory_region>,
+   <&mcu_r5fss0_core0_memory_region>;
+};
+
+&mcu_r5fss0_core1 {
+ mboxes = <&mailbox0_cluster0 &mbox_mcu_r5fss0_core1>;
+ memory-region = <&mcu_r5fss0_core1_dma_memory_region>,
+   <&mcu_r5fss0_core1_memory_region>;
+};
+
+&main_r5fss0_core0 {
+ mboxes = <&mailbox0_cluster1 &mbox_main_r5fss0_core0>;
+ memory-region = <&main_r5fss0_core0_dma_memory_region>,
+   <&main_r5fss0_core0_memory_region>;
+};
+
+&main_r5fss0_core1 {
+ mboxes = <&mailbox0_cluster1 &mbox_main_r5fss0_core1>;
+ memory-region = <&main_r5fss0_core1_dma_memory_region>,
+   <&main_r5fss0_core1_memory_region>;
+};
+
+&main_i2c0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&main_i2c0_pins_default>;
+ clock-frequency = <400000>;
+
+ exp_som: gpio@21 {
+  compatible = "ti,tca6408";
+  reg = <0x21>;
+  gpio-controller;
+  #gpio-cells = <2>;
+  gpio-line-names = "USB2.0_MUX_SEL", "CANUART_MUX1_SEL0",
+      "CANUART_MUX2_SEL0", "CANUART_MUX_SEL1",
+      "UART/LIN_MUX_SEL", "TRC_D17/AUDIO_REFCLK_SEL",
+      "GPIO_LIN_EN", "CAN_STB";
+ };
+};
+
+&ospi0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&mcu_fss0_ospi0_pins_default>;
+
+ flash@0{
+  compatible = "jedec,spi-nor";
+  reg = <0x0>;
+  spi-tx-bus-width = <8>;
+  spi-rx-bus-width = <8>;
+  spi-max-frequency = <25000000>;
+  cdns,tshsl-ns = <60>;
+  cdns,tsd2d-ns = <60>;
+  cdns,tchsh-ns = <60>;
+  cdns,tslch-ns = <60>;
+  cdns,read-delay = <4>;
+  cdns,phy-mode;
+
+  partitions {
+   compatible = "fixed-partitions";
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   partition@0 {
+    label = "ospi.tiboot3";
+    reg = <0x0 0x100000>;
+   };
+
+   partition@100000 {
+    label = "ospi.tispl";
+    reg = <0x100000 0x200000>;
+   };
+
+   partition@300000 {
+    label = "ospi.u-boot";
+    reg = <0x300000 0x400000>;
+   };
+
+   partition@700000 {
+    label = "ospi.env";
+    reg = <0x700000 0x40000>;
+   };
+
+   partition@740000 {
+    label = "ospi.env.backup";
+    reg = <0x740000 0x40000>;
+   };
+
+   partition@800000 {
+    label = "ospi.rootfs";
+    reg = <0x800000 0x37c0000>;
+   };
+
+   partition@3fc0000 {
+    label = "ospi.phypattern";
+    reg = <0x3fc0000 0x40000>;
+   };
+  };
+ };
+};
+# 9 "arch/arm/dts/.k3-j7200-r5-common-proc-board.dtb.pre.tmp" 2
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-ddr-evm-lp4-2666.dtsi" 1
+# 10 "arch/arm/dts/.k3-j7200-r5-common-proc-board.dtb.pre.tmp" 2
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j721e-ddr.dtsi" 1
+
+
+
+
+
+/ {
+ memorycontroller: memorycontroller@0298e000 {
+  compatible = "ti,j721e-ddrss";
+  reg = <0x0 0x02990000 0x0 0x4000>,
+        <0x0 0x0114000 0x0 0x100>;
+  reg-names = "cfg", "ctrl_mmr_lp4";
+  power-domains = <&k3_pds 47 0>,
+   <&k3_pds 90 0>;
+  clocks = <&k3_clks 47 2>, <&k3_clks 30 9>;
+  ti,ddr-freq1 = <666500000>;
+  ti,ddr-freq2 = <666500000>;
+  ti,ddr-fhs-cnt = <10>;
+
+  bootph-pre-ram;
+
+  ti,ctl-data = <
+   0x00000B00
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00002AF8
+   0x0001ADAF
+   0x00000005
+   0x0000006E
+   0x000411AB
+   0x0028B0AB
+   0x00000005
+   0x00000A6B
+   0x000411AB
+   0x0028B0AB
+   0x00000005
+   0x00000A6B
+   0x01010000
+   0x02011001
+   0x02010000
+   0x00020100
+   0x0000000B
+   0x0000001C
+   0x00000000
+   0x00000000
+   0x03020200
+   0x00003636
+   0x00100000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x040C0000
+   0x0C300C30
+   0x00050804
+   0x09040008
+   0x0D000204
+   0x113C0057
+   0x0D00291B
+   0x113C0057
+   0x2000291B
+   0x000A0A09
+   0x0400078A
+   0x130E0B04
+   0x0A00B6D0
+   0x130E0B0A
+   0x0A00B6D0
+   0x0203040A
+   0x1C040500
+   0x081D1C1D
+   0x14000E0A
+   0x02010A0A
+   0x01010002
+   0x04383808
+   0x041F1F04
+   0x00001F1F
+   0x00010100
+   0x03010000
+   0x00001008
+   0x000000CE
+   0x00000176
+   0x00001448
+   0x00000176
+   0x00001448
+   0x00000005
+   0x00040000
+   0x005D0012
+   0x005D0282
+   0x00400282
+   0x00120103
+   0x000A0005
+   0x1F08000A
+   0x0505011F
+   0x0301030A
+   0x03130A07
+   0x0A070301
+   0x00010313
+   0x00100010
+   0x01800180
+   0x01800180
+   0x03050505
+   0x03010303
+   0x14070A07
+   0x03030A03
+   0x14070A07
+   0x03030A03
+   0x03010000
+   0x00010000
+   0x00000000
+   0x00000000
+   0x01000000
+   0x80104002
+   0x00000000
+   0x00040005
+   0x00000000
+   0x00050000
+   0x00000004
+   0x00000000
+   0x00040005
+   0x00000000
+   0x00003380
+   0x00003380
+   0x00003380
+   0x00003380
+   0x00003380
+   0x00000000
+   0x000005A2
+   0x00051200
+   0x00051200
+   0x00051200
+   0x00051200
+   0x00051200
+   0x00000000
+   0x00008DF8
+   0x00051200
+   0x00051200
+   0x00051200
+   0x00051200
+   0x00051200
+   0x00000000
+   0x00008DF8
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x07030500
+   0x00030703
+   0x0A090000
+   0x0A090701
+   0x0900000E
+   0x0907010A
+   0x00000E0A
+   0x07010A09
+   0x000E0A09
+   0x07000401
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x08080000
+   0x01000000
+   0x800000C0
+   0x800000C0
+   0x800000C0
+   0x00000000
+   0x00001500
+   0x00000000
+   0x00000001
+   0x00000002
+   0x0000100E
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x000B0000
+   0x000E0006
+   0x000E0404
+   0x0086010B
+   0x0A0A014E
+   0x010B014E
+   0x014E0086
+   0x014E0A0A
+   0x00000000
+   0x00000000
+   0x00000000
+   0x24C40084
+   0x2B0024C4
+   0x00002B2B
+   0x36000000
+   0x27270036
+   0x0F0F0000
+   0x15000000
+   0x00841515
+   0x24C424C4
+   0x2B2B2B00
+   0x00000000
+   0x00363600
+   0x00002727
+   0x00000F0F
+   0x15151500
+   0x00000020
+   0x00000000
+   0x00000001
+   0x00000000
+   0x01000000
+   0x00000001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x02000000
+   0x01080101
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00001000
+   0x006403E8
+   0x00000000
+   0x00000000
+   0x00000000
+   0x15110000
+   0x00040C18
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00030000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x01000200
+   0x00370040
+   0x00020008
+   0x00400100
+   0x00280536
+   0x01000200
+   0x05360040
+   0x00000028
+   0x00430003
+   0x01000043
+   0x00000000
+   0x01010000
+   0x00000202
+   0x00000FFF
+   0x1FFF1000
+   0x01FF0000
+   0x000101FF
+   0x0FFF0B00
+   0x01010001
+   0x01010101
+   0x01180101
+   0x00030000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00040101
+   0x04010100
+   0x00000000
+   0x00000000
+   0x03030300
+   0x00000001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x01000000
+   0x00020201
+   0x01000101
+   0x01010001
+   0x00010101
+   0x05070703
+   0x0A081414
+   0x0009030A
+   0x080C030F
+   0x080C0306
+   0x0C090006
+   0x0100000C
+   0x05020501
+   0x00000002
+   0x00000000
+   0x00010000
+   0x00280D00
+   0x00000001
+   0x00030001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x01000000
+   0x00000001
+   0x00010100
+   0x03030000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x000556AA
+   0x000AAAAA
+   0x000AA955
+   0x00055555
+   0x000B3133
+   0x0004CD33
+   0x0004CECC
+   0x000B32CC
+   0x00010300
+   0x03000100
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00010000
+   0x00000404
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x2E2E1B00
+   0x000A0000
+   0x0000019C
+   0x00000200
+   0x00000200
+   0x00000200
+   0x00000200
+   0x000004D4
+   0x00001018
+   0x00000204
+   0x00002890
+   0x00000200
+   0x00000200
+   0x00000200
+   0x00000200
+   0x000079B0
+   0x000195A0
+   0x0000080E
+   0x00002890
+   0x00000200
+   0x00000200
+   0x00000200
+   0x00000200
+   0x000079B0
+   0x000195A0
+   0x0202080E
+   0x03030202
+   0x00000022
+   0x00000000
+   0x00000000
+   0x00001403
+   0x000007D0
+   0x00000000
+   0x00000000
+   0x00030000
+   0x0007001F
+   0x0013002B
+   0x0013002B
+   0x00000000
+   0x00000000
+   0x02000000
+   0x01000404
+   0x05120512
+   0x00000105
+   0x00010101
+   0x00010101
+   0x00010001
+   0x00000101
+   0x02000201
+   0x02010000
+   0x00000200
+   0x18060000
+   0x00000118
+   0xFFFFFFFF
+   0xFFFFFFFF
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+  >;
+
+  ti,pi-data = <
+   0x00000B00
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000101
+   0x00640000
+   0x00000001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000007
+   0x00010002
+   0x0800000F
+   0x00000103
+   0x00000005
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00010100
+   0x00280A00
+   0x00000000
+   0x0F000000
+   0x00003200
+   0x00000000
+   0x00000000
+   0x01010102
+   0x00000000
+   0x55555A5A
+   0x5555A5A5
+   0x00005A5A
+   0x0000A5A5
+   0x00000056
+   0x000000A9
+   0x000000A9
+   0x000000B5
+   0x00000000
+   0x00000000
+   0x000F0F00
+   0x00000017
+   0x000007D0
+   0x00000300
+   0x00000000
+   0x00000000
+   0x04080000
+   0x00010101
+   0x00000000
+   0x00030000
+   0x0F000000
+   0x00000017
+   0x00000000
+   0x00000000
+   0x00000000
+   0x0A0A140A
+   0x10020101
+   0x00020805
+   0x01000404
+   0x00000000
+   0x00000000
+   0x00000100
+   0x0001010F
+   0x00340000
+   0x00000000
+   0x00000000
+   0x0000FFFF
+   0x00000000
+   0x00080100
+   0x02000200
+   0x01000100
+   0x01000000
+   0x02000200
+   0x00000200
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000400
+   0x02010000
+   0x00080003
+   0x00080000
+   0x00000001
+   0x00000000
+   0x0000AA00
+   0x00000000
+   0x00000000
+   0x00010000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000008
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000002
+   0x00000000
+   0x00000000
+   0x0000000A
+   0x00000019
+   0x00000100
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x01000000
+   0x00010003
+   0x02000101
+   0x01030001
+   0x00010400
+   0x06000105
+   0x01070001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00010001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000401
+   0x00000000
+   0x00010000
+   0x00000000
+   0x1B1B0200
+   0x00000034
+   0x00000051
+   0x00020051
+   0x02000200
+   0x300C0C04
+   0x0010300C
+   0x000000CE
+   0x00000176
+   0x00001448
+   0x00000176
+   0x04001448
+   0x01010404
+   0x00001501
+   0x00150015
+   0x01000100
+   0x00000100
+   0x00000000
+   0x01010101
+   0x00000101
+   0x00000100
+   0x00000100
+   0x0E040100
+   0x0808020E
+   0x00040402
+   0x000D0035
+   0x00198041
+   0x00198041
+   0x01010101
+   0x0002000E
+   0x0002014E
+   0x0100014E
+   0x000F000F
+   0x014F0100
+   0x0100014F
+   0x014F014F
+   0x32103200
+   0x01013210
+   0x0A070601
+   0x140D080D
+   0x140D0810
+   0x0000C010
+   0x00C01000
+   0x00C01000
+   0x00021000
+   0x001C000E
+   0x001C014E
+   0x0011014E
+   0x32000056
+   0x00000301
+   0x005A002A
+   0x03013212
+   0x00002A00
+   0x3212005A
+   0x09000301
+   0x04010504
+   0x040006C9
+   0x0A032001
+   0x1C1F0B0A
+   0x00001D12
+   0x3C00A488
+   0x13142005
+   0x1C1F0B0E
+   0x00001D12
+   0x3C00A488
+   0x13142005
+   0x00019C0E
+   0x00001018
+   0x00002890
+   0x000195A0
+   0x00002890
+   0x000195A0
+   0x01800010
+   0x03030180
+   0x002AF803
+   0x0001ADAF
+   0x00000005
+   0x0000006E
+   0x00000010
+   0x000411AB
+   0x0001ADAF
+   0x00000005
+   0x00000A6B
+   0x00000180
+   0x000411AB
+   0x0001ADAF
+   0x00000005
+   0x00000A6B
+   0x01000180
+   0x00370040
+   0x00010008
+   0x05360040
+   0x00010028
+   0x05360040
+   0x00000328
+   0x00430043
+   0x08040404
+   0x00000055
+   0x55083C5A
+   0x5A000000
+   0x0055083C
+   0x3C5A0000
+   0x00005508
+   0x0C3C5A00
+   0x080F0E0D
+   0x000B0A09
+   0x00030201
+   0x01000000
+   0x04020201
+   0x00080804
+   0x00000000
+   0x00000000
+   0x002B0084
+   0x00150000
+   0x362B24C4
+   0x00150F27
+   0x362B24C4
+   0x00150F27
+   0x002B0084
+   0x00150000
+   0x362B24C4
+   0x00150F27
+   0x362B24C4
+   0x00150F27
+   0x002B0084
+   0x00150000
+   0x362B24C4
+   0x00150F27
+   0x362B24C4
+   0x00150F27
+   0x002B0084
+   0x00150000
+   0x362B24C4
+   0x00150F27
+   0x362B24C4
+   0x00150F27
+   0x00000000
+  >;
+
+  ti,phy-data = <
+   0x000004F0
+   0x00000000
+   0x00030200
+   0x00000000
+   0x00000000
+   0x01030000
+   0x00010000
+   0x01030004
+   0x01000000
+   0x00000000
+   0x00000000
+   0x01000001
+   0x00000100
+   0x000800C0
+   0x060100CC
+   0x00030066
+   0x00000000
+   0x00000301
+   0x55555A5A
+   0x5555A5A5
+   0x00005A5A
+   0x0000A5A5
+   0x00005656
+   0x0000A9A9
+   0x0000A9A9
+   0x0000B5B5
+   0x00000000
+   0x00000000
+   0x2A000000
+   0x00000808
+   0x0F000000
+   0x00000F0F
+   0x10200000
+   0x0C002007
+   0x00000000
+   0x00000000
+   0x55555555
+   0xAAAAAAAA
+   0x55555555
+   0xAAAAAAAA
+   0x00005555
+   0x01000100
+   0x00800180
+   0x00000001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000104
+   0x00000120
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000001
+   0x07FF0000
+   0x0080081F
+   0x00081020
+   0x04010000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000100
+   0x01CC0B01
+   0x1003CC0B
+   0x20000140
+   0x07FF0200
+   0x0000DD01
+   0x10100303
+   0x10101010
+   0x10101010
+   0x00021010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00050010
+   0x51517041
+   0x31C06000
+   0x07AB0340
+   0x00C0C001
+   0x09080001
+   0x10001000
+   0x0C063E42
+   0x0F0C2701
+   0x01000140
+   0x04000420
+   0x00000198
+   0x0A0000D0
+   0x00030200
+   0x02800000
+   0x80800000
+   0x00092010
+   0x76543210
+   0x00000008
+   0x02800280
+   0x02800280
+   0x02800280
+   0x02800280
+   0x00000280
+   0x0000A000
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x01C400A0
+   0x01A00003
+   0x00000000
+   0x00000000
+   0x00080200
+   0x00000000
+   0x20202000
+   0x20202020
+   0xF0F02020
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x000004F0
+   0x00000000
+   0x00030200
+   0x00000000
+   0x00000000
+   0x01030000
+   0x00010000
+   0x01030004
+   0x01000000
+   0x00000000
+   0x00000000
+   0x01000001
+   0x00000100
+   0x000800C0
+   0x060100CC
+   0x00030066
+   0x00000000
+   0x00000301
+   0x55555A5A
+   0x5555A5A5
+   0x00005A5A
+   0x0000A5A5
+   0x00005656
+   0x0000A9A9
+   0x0000A9A9
+   0x0000B5B5
+   0x00000000
+   0x00000000
+   0x2A000000
+   0x00000808
+   0x0F000000
+   0x00000F0F
+   0x10200000
+   0x0C002007
+   0x00000000
+   0x00000000
+   0x55555555
+   0xAAAAAAAA
+   0x55555555
+   0xAAAAAAAA
+   0x00005555
+   0x01000100
+   0x00800180
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000104
+   0x00000120
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000001
+   0x07FF0000
+   0x0080081F
+   0x00081020
+   0x04010000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000100
+   0x01CC0B01
+   0x1003CC0B
+   0x20000140
+   0x07FF0200
+   0x0000DD01
+   0x10100303
+   0x10101010
+   0x10101010
+   0x00021010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00050010
+   0x51517041
+   0x31C06000
+   0x07AB0340
+   0x00C0C001
+   0x09080001
+   0x10001000
+   0x0C063E42
+   0x0F0C2701
+   0x01000140
+   0x04000420
+   0x00000198
+   0x0A0000D0
+   0x00030200
+   0x02800000
+   0x80800000
+   0x00092010
+   0x76543210
+   0x00000008
+   0x02800280
+   0x02800280
+   0x02800280
+   0x02800280
+   0x00000280
+   0x0000A000
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x01C400A0
+   0x01A00003
+   0x00000000
+   0x00000000
+   0x00080200
+   0x00000000
+   0x20202000
+   0x20202020
+   0xF0F02020
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x000004F0
+   0x00000000
+   0x00030200
+   0x00000000
+   0x00000000
+   0x01030000
+   0x00010000
+   0x01030004
+   0x01000000
+   0x00000000
+   0x00000000
+   0x01000001
+   0x00000100
+   0x000800C0
+   0x060100CC
+   0x00030066
+   0x00000000
+   0x00000301
+   0x55555A5A
+   0x5555A5A5
+   0x00005A5A
+   0x0000A5A5
+   0x00005656
+   0x0000A9A9
+   0x0000A9A9
+   0x0000B5B5
+   0x00000000
+   0x00000000
+   0x2A000000
+   0x00000808
+   0x0F000000
+   0x00000F0F
+   0x10200000
+   0x0C002007
+   0x00000000
+   0x00000000
+   0x55555555
+   0xAAAAAAAA
+   0x55555555
+   0xAAAAAAAA
+   0x00005555
+   0x01000100
+   0x00800180
+   0x00000001
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000104
+   0x00000120
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000001
+   0x07FF0000
+   0x0080081F
+   0x00081020
+   0x04010000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000100
+   0x01CC0B01
+   0x1003CC0B
+   0x20000140
+   0x07FF0200
+   0x0000DD01
+   0x10100303
+   0x10101010
+   0x10101010
+   0x00021010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00050010
+   0x51517041
+   0x31C06000
+   0x07AB0340
+   0x00C0C001
+   0x09080001
+   0x10001000
+   0x0C063E42
+   0x0F0C2701
+   0x01000140
+   0x04000420
+   0x00000198
+   0x0A0000D0
+   0x00030200
+   0x02800000
+   0x80800000
+   0x00092010
+   0x76543210
+   0x00000008
+   0x02800280
+   0x02800280
+   0x02800280
+   0x02800280
+   0x00000280
+   0x0000A000
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x01C400A0
+   0x01A00003
+   0x00000000
+   0x00000000
+   0x00080200
+   0x00000000
+   0x20202000
+   0x20202020
+   0xF0F02020
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x000004F0
+   0x00000000
+   0x00030200
+   0x00000000
+   0x00000000
+   0x01030000
+   0x00010000
+   0x01030004
+   0x01000000
+   0x00000000
+   0x00000000
+   0x01000001
+   0x00000100
+   0x000800C0
+   0x060100CC
+   0x00030066
+   0x00000000
+   0x00000301
+   0x55555A5A
+   0x5555A5A5
+   0x00005A5A
+   0x0000A5A5
+   0x00005656
+   0x0000A9A9
+   0x0000A9A9
+   0x0000B5B5
+   0x00000000
+   0x00000000
+   0x2A000000
+   0x00000808
+   0x0F000000
+   0x00000F0F
+   0x10200000
+   0x0C002007
+   0x00000000
+   0x00000000
+   0x55555555
+   0xAAAAAAAA
+   0x55555555
+   0xAAAAAAAA
+   0x00005555
+   0x01000100
+   0x00800180
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000104
+   0x00000120
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000001
+   0x07FF0000
+   0x0080081F
+   0x00081020
+   0x04010000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000100
+   0x01CC0B01
+   0x1003CC0B
+   0x20000140
+   0x07FF0200
+   0x0000DD01
+   0x10100303
+   0x10101010
+   0x10101010
+   0x00021010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00100010
+   0x00050010
+   0x51517041
+   0x31C06000
+   0x07AB0340
+   0x00C0C001
+   0x09080001
+   0x10001000
+   0x0C063E42
+   0x0F0C2701
+   0x01000140
+   0x04000420
+   0x00000198
+   0x0A0000D0
+   0x00030200
+   0x02800000
+   0x80800000
+   0x00092010
+   0x76543210
+   0x00000008
+   0x02800280
+   0x02800280
+   0x02800280
+   0x02800280
+   0x00000280
+   0x0000A000
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x00A000A0
+   0x01C400A0
+   0x01A00003
+   0x00000000
+   0x00000000
+   0x00080200
+   0x00000000
+   0x20202000
+   0x20202020
+   0xF0F02020
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000100
+   0x00000200
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00400000
+   0x00000080
+   0x00DCBA98
+   0x03000000
+   0x00200000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x0000002A
+   0x00000015
+   0x00000015
+   0x0000002A
+   0x00000033
+   0x0000000C
+   0x0000000C
+   0x00000033
+   0x00543210
+   0x003F0000
+   0x000F013F
+   0x20202003
+   0x00202020
+   0x20008008
+   0x00000810
+   0x00000F00
+   0x00000000
+   0x00000000
+   0x00000000
+   0x000205BB
+   0x00030000
+   0x00000300
+   0x00000300
+   0x00000300
+   0x00000300
+   0x00000300
+   0x42080010
+   0x0000803E
+   0x00000001
+   0x01000102
+   0x00008000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00010100
+   0x00000000
+   0x00000000
+   0x00050000
+   0x04000000
+   0x00000055
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00002001
+   0x0000400F
+   0x50020028
+   0x01010000
+   0x80080001
+   0x10200000
+   0x00000008
+   0x00000000
+   0x01090E00
+   0x00040101
+   0x0000010F
+   0x00000000
+   0x0000FFFF
+   0x00000000
+   0x01010000
+   0x01080402
+   0x01200F02
+   0x00194280
+   0x00000004
+   0x00052000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x01000000
+   0x00000705
+   0x00000054
+   0x00030820
+   0x00010820
+   0x00010820
+   0x00010820
+   0x00010820
+   0x00010820
+   0x00010820
+   0x00010820
+   0x00010820
+   0x00000000
+   0x00000074
+   0x00000400
+   0x00000108
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x03000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x04102006
+   0x00041020
+   0x01C98C98
+   0x3F400000
+   0x3F3F1F3F
+   0x0000001F
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00010000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x76543210
+   0x00010198
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00040700
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000002
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00080000
+   0x000007FF
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x000FFFFF
+   0x000FFFFF
+   0x0000FFFF
+   0xFFFFFFF0
+   0x030FFFFF
+   0x01FFFFFF
+   0x0000FFFF
+   0x00000000
+   0x00000000
+   0x00000000
+   0x00000000
+   0x0001F7C0
+   0x00000002
+   0x00000000
+   0x00001142
+   0x010207AB
+   0x01000080
+   0x03900390
+   0x03900390
+   0x00000390
+   0x00000390
+   0x00000390
+   0x00000390
+   0x00000005
+   0x01813FBB
+   0x000000BB
+   0x0C000DFF
+   0x30000DFF
+   0x3F0DFF11
+   0x000100F0
+   0x780DFFBB
+   0x00007E31
+   0x000CBF11
+   0x01770010
+   0x000CBF11
+   0x01770010
+   0x3F0DFF11
+   0x017700F0
+   0x3F0DFF11
+   0x01FF00F0
+   0x20040006
+  >;
+ };
+};
+# 11 "arch/arm/dts/.k3-j7200-r5-common-proc-board.dtb.pre.tmp" 2
+
+/ {
+ aliases {
+  remoteproc0 = &sysctrler;
+  remoteproc1 = &a72_0;
+ };
+
+ chosen {
+  stdout-path = &main_uart0;
+  tick-timer = &timer1;
+  firmware-loader = &fs_loader0;
+ };
+
+ fs_loader0: fs_loader@0 {
+  bootph-all;
+  compatible = "u-boot,fs-loader";
+ };
+
+ a72_0: a72@0 {
+  compatible = "ti,am654-rproc";
+  reg = <0x0 0x00a90000 0x0 0x10>;
+  power-domains = <&k3_pds 61 1>,
+    <&k3_pds 202 1>,
+    <&k3_pds 4 1>;
+  resets = <&k3_reset 202 0>;
+  clocks = <&k3_clks 61 1>;
+  assigned-clocks = <&k3_clks 202 2>, <&k3_clks 61 1>, <&k3_clks 323 0>;
+  assigned-clock-parents= <0>, <0>, <&k3_clks 323 2>;
+  assigned-clock-rates = <2000000000>, <200000000>;
+  ti,sci = <&dmsc>;
+  ti,sci-proc-id = <32>;
+  ti,sci-host-id = <10>;
+  bootph-pre-ram;
+ };
+
+ clk_200mhz: dummy_clock_200mhz {
+  compatible = "fixed-clock";
+  #clock-cells = <0>;
+  clock-frequency = <200000000>;
+  bootph-pre-ram;
+ };
+
+ clk_19_2mhz: dummy_clock_19_2mhz {
+  compatible = "fixed-clock";
+  #clock-cells = <0>;
+  clock-frequency = <19200000>;
+  bootph-pre-ram;
+ };
+};
+
+&memorycontroller {
+ power-domains = <&k3_pds 8 0>,
+   <&k3_pds 90 0>;
+ clocks = <&k3_clks 8 5>, <&k3_clks 30 9>;
+};
+
+&cbass_mcu_wakeup {
+ mcu_secproxy: secproxy@2a380000 {
+  bootph-pre-ram;
+  compatible = "ti,am654-secure-proxy";
+  reg = <0x0 0x2a380000 0x0 0x80000>,
+        <0x0 0x2a400000 0x0 0x80000>,
+        <0x0 0x2a480000 0x0 0x80000>;
+  reg-names = "rt", "scfg", "target_data";
+  #mbox-cells = <1>;
+ };
+
+ sysctrler: sysctrler {
+  bootph-pre-ram;
+  compatible = "ti,am654-system-controller";
+  mboxes= <&mcu_secproxy 4>, <&mcu_secproxy 5>;
+  mbox-names = "tx", "rx";
+ };
+
+ dm_tifs: dm-tifs {
+  compatible = "ti,j721e-dm-sci";
+  ti,host-id = <3>;
+  ti,secure-host;
+  mbox-names = "rx", "tx";
+  mboxes= <&mcu_secproxy 21>,
+   <&mcu_secproxy 23>;
+  bootph-pre-ram;
+ };
+
+ wkup_vtm0: vtm@42040000 {
+  compatible = "ti,am654-vtm", "ti,j721e-avs";
+  reg = <0x0 0x42040000 0x0 0x330>;
+  power-domains = <&k3_pds 154 1>;
+  #thermal-sensor-cells = <1>;
+ };
+};
+
+&dmsc {
+ mboxes= <&mcu_secproxy 8>, <&mcu_secproxy 6>, <&mcu_secproxy 5>;
+ mbox-names = "tx", "rx", "notify";
+ ti,host-id = <4>;
+ ti,secure-host;
+};
+
+&wkup_pmx0 {
+ bootph-pre-ram;
+ wkup_uart0_pins_default: wkup_uart0_pins_default {
+  bootph-pre-ram;
+  pinctrl-single,pins = <
+   (((0xb0) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xb4) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (0))
+  >;
+ };
+
+ mcu_uart0_pins_default: mcu_uart0_pins_default {
+  bootph-pre-ram;
+  pinctrl-single,pins = <
+   (((0xf4) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xf0) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (0))
+   (((0xf8) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xfc) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (0))
+  >;
+ };
+
+ wkup_i2c0_pins_default: wkup-i2c0-pins-default {
+  pinctrl-single,pins = <
+   (((0x100) & 0x1fff)) ((((1 << (18)) | (1 << (17) | (0 << (16))))) | (0))
+   (((0x104) & 0x1fff)) ((((1 << (18)) | (1 << (17) | (0 << (16))))) | (0))
+  >;
+ };
+
+ wkup_gpio_pins_default: wkup-gpio-pins-default {
+  pinctrl-single,pins = <
+   (((0xd8) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (7))
+  >;
+ };
+};
+
+&main_pmx0 {
+ bootph-pre-ram;
+
+ main_uart0_pins_default: main_uart0_pins_default {
+  bootph-pre-ram;
+  pinctrl-single,pins = <
+   (((0xb0) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xb4) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (0))
+   (((0xc0) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (2))
+   (((0xc4) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (2))
+  >;
+ };
+
+ main_i2c0_pins_default: main-i2c0-pins-default {
+  bootph-pre-ram;
+  pinctrl-single,pins = <
+   (((0xd4) & 0x1fff)) ((((1 << (18)) | (1 << (17) | (0 << (16))))) | (0))
+   (((0xd8) & 0x1fff)) ((((1 << (18)) | (1 << (17) | (0 << (16))))) | (0))
+  >;
+ };
+
+ main_mmc1_pins_default: main_mmc1_pins_default {
+  pinctrl-single,pins = <
+   (((0x104) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0x100) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xfc) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xf8) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xf4) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xf0) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xec) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (0))
+   (((0xe4) & 0x1fff)) ((((1 << (18)) | (1 << (16)))) | (8))
+  >;
+ };
+
+ main_usbss0_pins_default: main_usbss0_pins_default {
+  pinctrl-single,pins = <
+   (((0x120) & 0x1fff)) ((((0 << (18)) | (1 << (16)))) | (0))
+  >;
+ };
+};
+
+&wkup_uart0 {
+ bootph-pre-ram;
+ pinctrl-names = "default";
+ pinctrl-0 = <&wkup_uart0_pins_default>;
+ status = "okay";
+};
+
+&mcu_uart0 {
+ /delete-property/ power-domains;
+ /delete-property/ clocks;
+ /delete-property/ clock-names;
+ pinctrl-names = "default";
+ pinctrl-0 = <&mcu_uart0_pins_default>;
+ status = "okay";
+ clock-frequency = <96000000>;
+};
+
+&main_uart0 {
+ status = "okay";
+ power-domains = <&k3_pds 146 0>;
+ pinctrl-names = "default";
+ pinctrl-0 = <&main_uart0_pins_default>;
+ status = "okay";
+};
+
+&main_sdhci0 {
+ /delete-property/ power-domains;
+ /delete-property/ assigned-clocks;
+ /delete-property/ assigned-clock-parents;
+ pinctrl-0 = <&main_mmc1_pins_default>;
+ pinctrl-names = "default";
+ clock-names = "clk_xin";
+ clocks = <&clk_200mhz>;
+ ti,driver-strength-ohm = <50>;
+ non-removable;
+ bus-width = <8>;
+};
+
+&main_sdhci1 {
+ /delete-property/ power-domains;
+ /delete-property/ assigned-clocks;
+ /delete-property/ assigned-clock-parents;
+ clock-names = "clk_xin";
+ clocks = <&clk_200mhz>;
+ ti,driver-strength-ohm = <50>;
+};
+
+&wkup_i2c0 {
+ bootph-pre-ram;
+ pinctrl-names = "default";
+ pinctrl-0 = <&wkup_i2c0_pins_default>;
+ clock-frequency = <400000>;
+
+ tps659413: tps659413@48 {
+  compatible = "ti,tps659413";
+  reg = <0x48>;
+  bootph-pre-ram;
+
+  regulators_a: regulators {
+   bootph-pre-ram;
+  };
+ };
+
+ lp876441: lp876441@4c {
+  compatible = "ti,lp876441";
+  reg = <0x4c>;
+  bootph-pre-ram;
+
+  regulators: regulators {
+   bootph-pre-ram;
+   buck1_reg: buck1 {
+
+    regulator-name = "buck1";
+    regulator-min-microvolt = <800000>;
+    regulator-max-microvolt = <1250000>;
+    regulator-always-on;
+    regulator-boot-on;
+    bootph-pre-ram;
+   };
+  };
+ };
+
+};
+
+&wkup_vtm0 {
+ vdd-supply-2 = <&buck1_reg>;
+ bootph-pre-ram;
+};
+
+&main_i2c0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&main_i2c0_pins_default>;
+ clock-frequency = <400000>;
+
+ exp1: gpio@20 {
+  compatible = "ti,tca6416";
+  reg = <0x20>;
+  gpio-controller;
+  #gpio-cells = <2>;
+ };
+
+ exp2: gpio@22 {
+  compatible = "ti,tca6424";
+  reg = <0x22>;
+  gpio-controller;
+  #gpio-cells = <2>;
+ };
+};
+
+&usbss0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&main_usbss0_pins_default>;
+ ti,vbus-divider;
+ ti,usb2-only;
+};
+
+&usb0 {
+ dr_mode = "otg";
+ maximum-speed = "high-speed";
+};
+
+&wkup_gpio0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&wkup_gpio_pins_default>;
+};
+
+&hbmc {
+ reg = <0x0 0x47040000 0x0 0x100>,
+       <0x0 0x50000000 0x0 0x8000000>;
+ ranges = <0x0 0x0 0x0 0x50000000 0x4000000>,
+   <0x1 0x0 0x0 0x54000000 0x800000>;
+};
+
+&ospi0 {
+ reg = <0x0 0x47040000 0x0 0x100>,
+       <0x0 0x50000000 0x0 0x8000000>;
+};
+
+&mcu_ringacc {
+ ti,sci = <&dm_tifs>;
+};
+
+&mcu_udmap {
+ ti,sci = <&dm_tifs>;
+};
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-common-proc-board-u-boot.dtsi" 1
+
+
+
+
+
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-binman.dtsi" 1
+
+
+
+
+
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-binman.dtsi" 1
+
+
+
+
+
+/ {
+ binman: binman {
+  multiple-images;
+ };
+};
+
+&binman {
+ custMpk {
+  filename = "custMpk.pem";
+  blob-ext {
+   filename = "../keys/custMpk.pem";
+  };
+ };
+
+ ti-degenerate-key {
+  filename = "ti-degenerate-key.pem";
+  blob-ext {
+   filename = "../keys/ti-degenerate-key.pem";
+  };
+ };
+};
+
+
+
+&binman {
+ board-cfg {
+  filename = "board-cfg.bin";
+  bcfg_yaml: ti-board-config {
+   config = "board-cfg.yaml";
+   schema = "../common/schema.yaml";
+  };
+ };
+ pm-cfg {
+  filename = "pm-cfg.bin";
+  rcfg_yaml: ti-board-config {
+   config = "pm-cfg.yaml";
+   schema = "../common/schema.yaml";
+  };
+ };
+ rm-cfg {
+  filename = "rm-cfg.bin";
+  pcfg_yaml: ti-board-config {
+   config = "rm-cfg.yaml";
+   schema = "../common/schema.yaml";
+  };
+ };
+ sec-cfg {
+  filename = "sec-cfg.bin";
+  scfg_yaml: ti-board-config {
+   config = "sec-cfg.yaml";
+   schema = "../common/schema.yaml";
+  };
+ };
+ combined-tifs-cfg {
+  filename = "combined-tifs-cfg.bin";
+  ti-board-config {
+   bcfg_yaml_tifs: board-cfg {
+    config = "board-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+   scfg_yaml_tifs: sec-cfg {
+    config = "sec-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+   pcfg_yaml_tifs: pm-cfg {
+    config = "pm-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+   rcfg_yaml_tifs: rm-cfg {
+    config = "rm-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+  };
+ };
+ combined-dm-cfg {
+  filename = "combined-dm-cfg.bin";
+  ti-board-config {
+   pcfg_yaml_dm: pm-cfg {
+    config = "pm-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+   rcfg_yaml_dm: rm-cfg {
+    config = "rm-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+  };
+ };
+ combined-sysfw-cfg {
+  filename = "combined-sysfw-cfg.bin";
+  ti-board-config {
+   board-cfg {
+    config = "board-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+   sec-cfg {
+    config = "sec-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+   pm-cfg {
+    config = "pm-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+   rm-cfg {
+    config = "rm-cfg.yaml";
+    schema = "../common/schema.yaml";
+   };
+  };
+ };
+};
+# 7 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-binman.dtsi" 2
+# 7 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-common-proc-board-u-boot.dtsi" 2
+
+/ {
+ chosen {
+  stdout-path = "serial2:115200n8";
+  tick-timer = &timer1;
+ };
+
+ aliases {
+  ethernet0 = &cpsw_port1;
+  i2c0 = &wkup_i2c0;
+  i2c1 = &mcu_i2c0;
+  i2c2 = &mcu_i2c1;
+  i2c3 = &main_i2c0;
+ };
+};
+
+&cbass_main {
+ bootph-pre-ram;
+};
+
+&main_navss {
+ bootph-pre-ram;
+};
+
+&cbass_mcu_wakeup {
+ bootph-pre-ram;
+
+ timer1: timer@40400000 {
+  compatible = "ti,omap5430-timer";
+  reg = <0x0 0x40400000 0x0 0x80>;
+  ti,timer-alwon;
+  clock-frequency = <250000000>;
+  bootph-pre-ram;
+ };
+
+ chipid@43000014 {
+  bootph-pre-ram;
+ };
+
+ mcu_navss: bus@28380000 {
+  bootph-pre-ram;
+  #address-cells = <2>;
+  #size-cells = <2>;
+
+  ringacc@2b800000 {
+   reg = <0x0 0x2b800000 0x0 0x400000>,
+    <0x0 0x2b000000 0x0 0x400000>,
+    <0x0 0x28590000 0x0 0x100>,
+    <0x0 0x2a500000 0x0 0x40000>,
+    <0x0 0x28440000 0x0 0x40000>;
+   reg-names = "rt", "fifos", "proxy_gcfg", "proxy_target", "cfg";
+   bootph-pre-ram;
+  };
+
+  dma-controller@285c0000 {
+   reg = <0x0 0x285c0000 0x0 0x100>,
+    <0x0 0x284c0000 0x0 0x4000>,
+    <0x0 0x2a800000 0x0 0x40000>,
+    <0x0 0x284a0000 0x0 0x4000>,
+    <0x0 0x2aa00000 0x0 0x40000>,
+    <0x0 0x28400000 0x0 0x2000>;
+   reg-names = "gcfg", "rchan", "rchanrt", "tchan",
+         "tchanrt", "rflow";
+   bootph-pre-ram;
+  };
+ };
+};
+
+&secure_proxy_main {
+ bootph-pre-ram;
+};
+
+&dmsc {
+ bootph-pre-ram;
+ k3_sysreset: sysreset-controller {
+  compatible = "ti,sci-sysreset";
+  bootph-pre-ram;
+ };
+};
+
+&k3_pds {
+ bootph-pre-ram;
+};
+
+&k3_clks {
+ bootph-pre-ram;
+};
+
+&k3_reset {
+ bootph-pre-ram;
+};
+
+&wkup_pmx0 {
+ bootph-pre-ram;
+};
+
+&main_pmx0 {
+ bootph-pre-ram;
+};
+
+&main_uart0 {
+ bootph-pre-ram;
+};
+
+&mcu_uart0 {
+ bootph-pre-ram;
+};
+
+&main_sdhci0 {
+ bootph-pre-ram;
+};
+
+&main_sdhci1 {
+ bootph-pre-ram;
+};
+
+&wkup_i2c0 {
+ bootph-pre-ram;
+};
+
+&main_i2c0 {
+ bootph-pre-ram;
+};
+
+&main_i2c0_pins_default {
+ bootph-pre-ram;
+};
+
+&exp2 {
+ bootph-pre-ram;
+};
+
+&mcu_cpsw {
+ reg = <0x0 0x46000000 0x0 0x200000>,
+       <0x0 0x40f00200 0x0 0x8>;
+ reg-names = "cpsw_nuss", "mac_efuse";
+ /delete-property/ ranges;
+
+ cpsw-phy-sel@40f04040 {
+  compatible = "ti,am654-cpsw-phy-sel";
+  reg= <0x0 0x40f04040 0x0 0x4>;
+  reg-names = "gmii-sel";
+ };
+};
+
+&main_usbss0_pins_default {
+ bootph-pre-ram;
+};
+
+&usbss0 {
+ bootph-pre-ram;
+ ti,usb2-only;
+};
+
+&usb0 {
+ dr_mode = "peripheral";
+ bootph-pre-ram;
+};
+
+&mcu_fss0_hpb0_pins_default {
+ bootph-pre-ram;
+};
+
+&mcu_fss0_ospi0_pins_default {
+ bootph-pre-ram;
+};
+
+&fss {
+ bootph-pre-ram;
+};
+
+&wkup_gpio_pins_default {
+ bootph-pre-ram;
+};
+
+&wkup_gpio0 {
+ bootph-pre-ram;
+};
+
+&hbmc {
+ bootph-pre-ram;
+
+ flash@0,0 {
+  bootph-pre-ram;
+ };
+};
+
+&hbmc_mux {
+ bootph-pre-ram;
+};
+
+&ospi0 {
+ bootph-pre-ram;
+
+ flash@0 {
+  bootph-pre-ram;
+
+  partitions {
+   bootph-pre-ram;
+
+   partition@3fc0000 {
+    bootph-pre-ram;
+   };
+  };
+ };
+};
+
+&serdes_ln_ctrl {
+ u-boot,mux-autoprobe;
+};
+
+&usb_serdes_mux {
+ u-boot,mux-autoprobe;
+};
+
+&serdes0 {
+ bootph-pre-ram;
+};
+
+&main_r5fss0 {
+ ti,cluster-mode = <0>;
+};
+# 331 "arch/arm/dts/.k3-j7200-r5-common-proc-board.dtb.pre.tmp" 2
+# 1 "/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/arch/arm/dts/k3-j7200-r5-common-proc-board-u-boot.dtsi" 1
+
+
+
+
+
+&tps659413 {
+ esm: esm {
+  compatible = "ti,tps659413-esm";
+  bootph-pre-ram;
+ };
+};
+# 332 "arch/arm/dts/.k3-j7200-r5-common-proc-board.dtb.pre.tmp" 2

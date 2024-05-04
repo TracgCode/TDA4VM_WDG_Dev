@@ -1,0 +1,22 @@
+{
+    "makefile.makefilePath": "./Makefile",
+    "files.associations": {
+        "sciclient.h": "c",
+        "sciserver_tirtos.h": "c",
+        "sciserver.h": "c",
+        "sciclient_appcommon.h": "c",
+        "osal.h": "c",
+        "board.h": "c",
+        "spi.h": "c",
+        "ipc_setup.h": "c",
+        "sciclient_priv.h": "c",
+        "ipc.h": "c",
+        "sci_init.h": "c",
+        "ipc_trace.h": "c",
+        "ipc_virtio.h": "c",
+        "ipc_rsctypes.h": "c",
+        "ipc_config.h": "c",
+        "soc.h": "c",
+        "ipc_rsctable.h": "c"
+    },
+}

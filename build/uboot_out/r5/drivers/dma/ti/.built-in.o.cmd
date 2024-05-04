@@ -1,0 +1,1 @@
+cmd_drivers/dma/ti/built-in.o :=  rm -f drivers/dma/ti/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/dma/ti/built-in.o drivers/dma/ti/k3-udma.o drivers/dma/ti/k3-psil-data.o

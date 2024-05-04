@@ -1,0 +1,7 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/fs/ubifs/tnc_misc.c:33:21:ubifs_tnc_levelorder_next	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/fs/ubifs/tnc_misc.c:128:5:ubifs_search_zbranch	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/fs/ubifs/tnc_misc.c:172:21:ubifs_tnc_postorder_first	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/fs/ubifs/tnc_misc.c:196:21:ubifs_tnc_postorder_next	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/fs/ubifs/tnc_misc.c:221:6:ubifs_destroy_tnc_subtree	64	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/fs/ubifs/tnc_misc.c:399:21:ubifs_load_znode	96	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/fs/ubifs/tnc_misc.c:451:5:ubifs_tnc_read_node	48	static

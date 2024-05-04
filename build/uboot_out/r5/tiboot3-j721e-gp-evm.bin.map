@@ -1,0 +1,4 @@
+ImagePos    Offset      Size  Name
+00000000  00000000  00048045  tiboot3-j721e-gp-evm.bin
+00000000   00000000  000003cd  ti-secure-rom
+000003cd   000003cd  00047c78  u-boot-spl

@@ -1,0 +1,1 @@
+cmd_lib/efi_driver/built-in.o :=  rm -f lib/efi_driver/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT lib/efi_driver/built-in.o lib/efi_driver/efi_uclass.o lib/efi_driver/efi_block_device.o

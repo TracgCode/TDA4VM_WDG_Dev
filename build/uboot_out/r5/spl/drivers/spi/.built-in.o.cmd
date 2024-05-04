@@ -1,0 +1,1 @@
+cmd_spl/drivers/spi/built-in.o :=  rm -f spl/drivers/spi/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/spi/built-in.o spl/drivers/spi/spi-uclass.o spl/drivers/spi/cadence_qspi.o spl/drivers/spi/cadence_qspi_apb.o spl/drivers/spi/spi-mem.o

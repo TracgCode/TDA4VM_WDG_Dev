@@ -1,0 +1,1 @@
+cmd_spl/drivers/mmc/built-in.o :=  rm -f spl/drivers/mmc/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/mmc/built-in.o spl/drivers/mmc/mmc.o spl/drivers/mmc/mmc-uclass.o spl/drivers/mmc/sdhci-adma.o spl/drivers/mmc/mmc_boot.o spl/drivers/mmc/sdhci.o spl/drivers/mmc/am654_sdhci.o

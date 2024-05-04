@@ -1,0 +1,1 @@
+cmd_drivers/mtd/mtd.o := rm -f drivers/mtd/mtd.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/mtd/mtd.o drivers/mtd/mtdcore.o drivers/mtd/mtd_uboot.o drivers/mtd/mtd-uclass.o drivers/mtd/mtdpart.o drivers/mtd/cfi_flash.o drivers/mtd/cfi_mtd.o drivers/mtd/hbmc-am654.o

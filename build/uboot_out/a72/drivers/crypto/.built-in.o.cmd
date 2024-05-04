@@ -1,0 +1,1 @@
+cmd_drivers/crypto/built-in.o :=  rm -f drivers/crypto/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/crypto/built-in.o drivers/crypto/rsa_mod_exp/built-in.o drivers/crypto/fsl/built-in.o drivers/crypto/hash/built-in.o drivers/crypto/aspeed/built-in.o drivers/crypto/nuvoton/built-in.o

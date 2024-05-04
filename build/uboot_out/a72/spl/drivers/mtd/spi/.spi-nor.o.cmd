@@ -1,0 +1,1 @@
+cmd_spl/drivers/mtd/spi/spi-nor.o := rm -f spl/drivers/mtd/spi/spi-nor.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT spl/drivers/mtd/spi/spi-nor.o spl/drivers/mtd/spi/sf_probe.o spl/drivers/mtd/spi/spi-nor-ids.o spl/drivers/mtd/spi/spi-nor-core.o

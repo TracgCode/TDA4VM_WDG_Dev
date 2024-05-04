@@ -1,0 +1,1 @@
+cmd_spl/drivers/mmc/built-in.o :=  rm -f spl/drivers/mmc/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT spl/drivers/mmc/built-in.o spl/drivers/mmc/mmc.o spl/drivers/mmc/mmc-uclass.o spl/drivers/mmc/sdhci-adma.o spl/drivers/mmc/mmc_boot.o spl/drivers/mmc/sdhci.o spl/drivers/mmc/am654_sdhci.o

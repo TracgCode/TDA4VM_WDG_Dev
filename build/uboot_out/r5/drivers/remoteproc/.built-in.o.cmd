@@ -1,0 +1,1 @@
+cmd_drivers/remoteproc/built-in.o :=  rm -f drivers/remoteproc/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/remoteproc/built-in.o drivers/remoteproc/rproc-uclass.o drivers/remoteproc/rproc-elf-loader.o drivers/remoteproc/k3_system_controller.o drivers/remoteproc/ti_k3_arm64_rproc.o

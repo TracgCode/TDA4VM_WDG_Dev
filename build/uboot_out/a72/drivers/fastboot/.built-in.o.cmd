@@ -1,0 +1,1 @@
+cmd_drivers/fastboot/built-in.o :=  rm -f drivers/fastboot/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/fastboot/built-in.o drivers/fastboot/fb_common.o drivers/fastboot/fb_getvar.o drivers/fastboot/fb_command.o drivers/fastboot/fb_mmc.o

@@ -1,0 +1,6 @@
+reset-ti-sci.c:46:12:ti_sci_reset_of_xlate	0	static
+reset-ti-sci.c:157:12:ti_sci_reset_status	32	static
+reset-ti-sci.c:81:12:ti_sci_reset_set	40	static
+reset-ti-sci.c:139:12:ti_sci_reset_deassert	0	static
+reset-ti-sci.c:122:12:ti_sci_reset_assert	0	static
+reset-ti-sci.c:29:12:ti_sci_reset_probe	16	static

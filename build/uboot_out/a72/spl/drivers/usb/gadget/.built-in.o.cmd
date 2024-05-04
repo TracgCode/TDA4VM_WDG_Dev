@@ -1,0 +1,1 @@
+cmd_spl/drivers/usb/gadget/built-in.o :=  rm -f spl/drivers/usb/gadget/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT spl/drivers/usb/gadget/built-in.o spl/drivers/usb/gadget/epautoconf.o spl/drivers/usb/gadget/config.o spl/drivers/usb/gadget/usbstring.o spl/drivers/usb/gadget/g_dnl.o spl/drivers/usb/gadget/f_dfu.o

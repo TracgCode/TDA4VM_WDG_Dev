@@ -1,0 +1,7 @@
+clk-k3.c:208:12:ti_clk_of_xlate	16	static
+clk-k3.c:370:12:ti_clk_disable	8	static
+clk-k3.c:362:12:ti_clk_enable	8	static
+clk-k3.c:353:12:ti_clk_set_parent	16	static
+clk-k3.c:234:14:ti_clk_get_rate	8	static
+clk-k3.c:242:14:ti_clk_set_rate	32	static
+clk-k3.c:98:12:ti_clk_probe	64	static

@@ -1,0 +1,2 @@
+sdhci-adma.c:42:6:sdhci_prepare_adma_table	32	static
+sdhci-adma.c:70:25:sdhci_adma_init	0	static

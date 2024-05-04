@@ -1,0 +1,1 @@
+cmd_drivers/video/built-in.o :=  rm -f drivers/video/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/video/built-in.o drivers/video/ti/built-in.o drivers/video/bridge/built-in.o drivers/video/sunxi/built-in.o

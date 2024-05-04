@@ -1,0 +1,1 @@
+cmd_spl/drivers/gpio/built-in.o :=  rm -f spl/drivers/gpio/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/gpio/built-in.o spl/drivers/gpio/gpio-uclass.o spl/drivers/gpio/da8xx_gpio.o

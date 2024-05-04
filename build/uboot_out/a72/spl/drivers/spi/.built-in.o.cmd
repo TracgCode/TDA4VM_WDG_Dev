@@ -1,0 +1,1 @@
+cmd_spl/drivers/spi/built-in.o :=  rm -f spl/drivers/spi/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT spl/drivers/spi/built-in.o spl/drivers/spi/spi-uclass.o spl/drivers/spi/cadence_qspi.o spl/drivers/spi/cadence_qspi_apb.o spl/drivers/spi/spi-mem.o

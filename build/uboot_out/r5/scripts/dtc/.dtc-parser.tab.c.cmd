@@ -1,0 +1,1 @@
+cmd_scripts/dtc/dtc-parser.tab.c := bison -oscripts/dtc/dtc-parser.tab.c -t -l /home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/scripts/dtc/dtc-parser.y

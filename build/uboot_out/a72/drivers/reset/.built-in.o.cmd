@@ -1,0 +1,1 @@
+cmd_drivers/reset/built-in.o :=  rm -f drivers/reset/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/reset/built-in.o drivers/reset/reset-uclass.o drivers/reset/reset-ti-sci.o

@@ -1,0 +1,5 @@
+vbe.c:28:5:vbe_find_next_device	16	static
+vbe.c:40:5:vbe_find_first_device	8	static
+vbe.c:49:5:vbe_list	40	static
+vbe.c:77:5:vbe_select	16	static
+vbe.c:90:5:vbe_find_by_any	24	static

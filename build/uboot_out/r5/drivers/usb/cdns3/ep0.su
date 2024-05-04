@@ -1,0 +1,14 @@
+ep0.c:97:12:cdns3_ep0_delegate_req	8	static
+ep0.c:538:13:__pending_setup_status_handler	8	static
+ep0.c:689:12:cdns3_gadget_ep0_enable	0	static
+ep0.c:700:12:cdns3_gadget_ep0_disable	0	static
+ep0.c:712:12:cdns3_gadget_ep0_set_halt	0	static
+ep0.c:42:13:cdns3_ep0_run_transfer	24	static
+ep0.c:810:5:cdns3_gadget_ep_set_wedge	8	static
+ep0.c:118:13:cdns3_ep0_complete_setup	24	static
+ep0.c:428:12:cdns3_req_ep0_handle_feature	24	static
+ep0.c:726:12:cdns3_gadget_ep0_queue	32	static
+ep0.c:549:6:cdns3_pending_setup_status_handler	0	static
+ep0.c:653:6:cdns3_check_ep0_interrupt_proceed	40	static
+ep0.c:838:6:cdns3_ep0_config	16	static
+ep0.c:898:5:cdns3_init_ep0	16	static

@@ -1,0 +1,1 @@
+cmd_spl/drivers/firmware/built-in.o :=  rm -f spl/drivers/firmware/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT spl/drivers/firmware/built-in.o spl/drivers/firmware/firmware-uclass.o spl/drivers/firmware/ti_sci.o

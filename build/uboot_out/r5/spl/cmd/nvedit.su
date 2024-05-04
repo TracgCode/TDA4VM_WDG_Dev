@@ -1,0 +1,3 @@
+nvedit.c:226:12:_do_env_set.isra.0.constprop	56	static
+nvedit.c:82:5:env_get_id	0	static
+nvedit.c:306:5:env_set	24	static

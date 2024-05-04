@@ -1,0 +1,1 @@
+cmd_spl/arch/arm/mach-k3/j721e/built-in.o :=  rm -f spl/arch/arm/mach-k3/j721e/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/arch/arm/mach-k3/j721e/built-in.o spl/arch/arm/mach-k3/j721e/clk-data.o spl/arch/arm/mach-k3/j721e/dev-data.o

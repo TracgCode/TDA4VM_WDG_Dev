@@ -1,0 +1,9 @@
+spl_mmc.c:136:12:spl_mmc_get_device_index	8	static
+spl_mmc.c:62:14:h_spl_load_read	16	static
+spl_mmc.c:269:5:spl_start_uboot	0	static
+spl_mmc.c:354:12:spl_mmc_boot_mode	0	static
+spl_mmc.c:372:22:spl_mmc_get_uboot_raw_sector	0	static
+spl_mmc.c:378:5:default_spl_mmc_emmc_boot_partition	0	static
+spl_mmc.c:396:12:spl_mmc_emmc_boot_partition	0	static
+spl_mmc.c:412:5:spl_mmc_load	80	static
+spl_mmc.c:501:5:spl_mmc_load_image	16	static

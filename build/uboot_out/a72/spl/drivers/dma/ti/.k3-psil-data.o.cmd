@@ -1,0 +1,1 @@
+cmd_spl/drivers/dma/ti/k3-psil-data.o := rm -f spl/drivers/dma/ti/k3-psil-data.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT spl/drivers/dma/ti/k3-psil-data.o spl/drivers/dma/ti/k3-psil.o spl/drivers/dma/ti/k3-psil-j721e.o

@@ -1,0 +1,5 @@
+k3_avs.c:75:12:am6_efuse_xlate	0	static
+k3_avs.c:97:12:k3_avs_program_voltage.isra.0	4	static
+k3_avs.c:248:12:k3_avs_probe	48	static
+k3_avs.c:150:5:k3_avs_set_opp	16	static
+k3_avs.c:189:5:k3_avs_notify_freq	16	static

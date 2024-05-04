@@ -1,0 +1,15 @@
+serial-uclass.c:188:13:_serial_putc	16	static
+serial-uclass.c:505:12:serial_post_probe	0	static
+serial-uclass.c:567:12:serial_pre_remove	0	static
+serial-uclass.c:318:6:serial_putc	0	static
+serial-uclass.c:324:6:serial_puts	16	static
+serial-uclass.c:331:6:serial_flush	16	static
+serial-uclass.c:340:5:serial_getc	16	static
+serial-uclass.c:348:5:serial_tstc	0	static
+serial-uclass.c:356:6:serial_setbrg	0	static
+serial-uclass.c:162:5:serial_init	40	static
+serial-uclass.c:174:5:serial_initialize	0	static
+serial-uclass.c:368:5:serial_getconfig	0	static
+serial-uclass.c:379:5:serial_setconfig	0	static
+serial-uclass.c:390:5:serial_getinfo	4	static
+serial-uclass.c:406:6:serial_stdio_init	0	static

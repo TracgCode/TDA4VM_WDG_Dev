@@ -1,0 +1,1 @@
+cmd_drivers/dma/ti/built-in.o :=  rm -f drivers/dma/ti/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/dma/ti/built-in.o drivers/dma/ti/k3-udma.o drivers/dma/ti/k3-psil-data.o

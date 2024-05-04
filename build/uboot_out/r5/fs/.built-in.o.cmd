@@ -1,0 +1,1 @@
+cmd_fs/built-in.o :=  rm -f fs/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT fs/built-in.o fs/fs.o fs/ext4/built-in.o fs/fat/built-in.o fs/fs_internal.o

@@ -1,0 +1,1 @@
+cmd_common/init/built-in.o :=  rm -f common/init/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT common/init/built-in.o common/init/board_init.o

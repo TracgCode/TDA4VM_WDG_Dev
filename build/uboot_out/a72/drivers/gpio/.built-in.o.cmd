@@ -1,0 +1,1 @@
+cmd_drivers/gpio/built-in.o :=  rm -f drivers/gpio/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/gpio/built-in.o drivers/gpio/gpio-uclass.o drivers/gpio/pca953x_gpio.o drivers/gpio/da8xx_gpio.o

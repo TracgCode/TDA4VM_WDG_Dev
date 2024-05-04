@@ -1,0 +1,1 @@
+cmd_drivers/misc/built-in.o :=  rm -f drivers/misc/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/misc/built-in.o drivers/misc/misc-uclass.o drivers/misc/fs_loader.o drivers/misc/k3_avs.o drivers/misc/k3_esm.o drivers/misc/esm_pmic.o

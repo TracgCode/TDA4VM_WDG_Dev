@@ -1,0 +1,2 @@
+sysreset-ti-sci.c:43:12:ti_sci_sysreset_request	24	static
+sysreset-ti-sci.c:26:12:ti_sci_sysreset_probe	16	static

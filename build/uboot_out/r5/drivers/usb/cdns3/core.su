@@ -1,0 +1,8 @@
+core.c:251:12:cdns3_idle_role_start	0	static
+core.c:256:13:cdns3_idle_role_stop	0	static
+core.c:76:13:cdns3_role_stop	8	static
+core.c:50:12:cdns3_role_start	8	static
+core.c:450:12:cdns3_gadget_remove	8	static
+core.c:286:5:cdns3_hw_role_switch	32	static
+core.c:440:12:cdns3_gadget_probe	24	static
+core.c:387:5:cdns3_bind	32	static

@@ -1,0 +1,1 @@
+cmd_spl/drivers/power/regulator/built-in.o :=  rm -f spl/drivers/power/regulator/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/power/regulator/built-in.o spl/drivers/power/regulator/regulator-uclass.o spl/drivers/power/regulator/tps65941_regulator.o

@@ -1,0 +1,6 @@
+vbe_simple.c:147:12:vbe_simple_read_bootflow	0	static
+vbe_simple.c:161:12:vbe_simple_read_file	16	static
+vbe_simple.c:183:12:bootmeth_vbe_simple_probe	16	static
+vbe_simple.c:203:12:bootmeth_vbe_simple_bind	8	static
+vbe_simple.c:93:5:vbe_simple_read_state	624	static
+vbe_simple.c:128:12:vbe_simple_get_state_desc	288	static

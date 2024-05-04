@@ -1,0 +1,1 @@
+cmd_net/built-in.o :=  rm -f net/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT net/built-in.o net/arp.o net/bootp.o net/eth-uclass.o net/eth_bootdev.o net/eth_common.o net/net.o net/nfs.o net/ping.o net/tftp.o

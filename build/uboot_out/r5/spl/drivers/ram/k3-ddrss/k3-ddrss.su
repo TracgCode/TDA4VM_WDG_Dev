@@ -1,0 +1,12 @@
+k3-ddrss.c:709:12:k3_ddrss_get_info	0	static
+k3-ddrss.c:769:12:k3_msmc_probe	16	static
+k3-ddrss.c:184:12:k3_lpddr4_read_ddr_type	24	static
+k3-ddrss.c:293:13:k3_lpddr4_info_handler	24	static
+k3-ddrss.c:419:6:k3_lpddr4_probe	16	static
+k3-ddrss.c:436:6:k3_lpddr4_init	8	static
+k3-ddrss.c:467:6:populate_data_array_from_dt	16	static
+k3-ddrss.c:500:6:k3_lpddr4_hardware_reg_init	13112	static
+k3-ddrss.c:526:6:k3_lpddr4_start	32	static
+k3-ddrss.c:616:6:j721e_lpddr4_priority_map	0	static
+k3-ddrss.c:628:12:k3_ddrss_probe	32	static
+k3-ddrss.c:684:5:k3_ddrss_ddr_fdt_fixup	96	static

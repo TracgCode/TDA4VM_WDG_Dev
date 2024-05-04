@@ -1,0 +1,1 @@
+cmd_spl/boot/built-in.o :=  rm -f spl/boot/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/boot/built-in.o spl/boot/image.o spl/boot/image-board.o spl/boot/image-fdt.o spl/boot/image-fit.o spl/boot/boot_fit.o spl/boot/common_fit.o

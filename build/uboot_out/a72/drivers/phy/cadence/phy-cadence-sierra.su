@@ -1,0 +1,11 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:539:12:cdns_sierra_pll_mux_set_parent	80	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:568:12:cdns_sierra_pll_mux_probe	64	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:491:12:cdns_sierra_link_off	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:498:12:cdns_sierra_link_reset	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:430:12:cdns_sierra_link_on	80	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:361:12:cdns_sierra_link_init	80	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:1027:12:cdns_sierra_link_probe	176	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:1139:12:cdns_sierra_phy_remove	48	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:658:23:cdns_regmap_init	96	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:1000:12:cdns_sierra_phy_bind	64	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/phy/cadence/phy-cadence-sierra.c:1070:12:cdns_sierra_phy_probe	128	static

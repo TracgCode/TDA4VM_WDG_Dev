@@ -1,0 +1,1 @@
+cmd_drivers/soc/ti/built-in.o :=  rm -f drivers/soc/ti/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/soc/ti/built-in.o drivers/soc/ti/k3-navss-ringacc.o

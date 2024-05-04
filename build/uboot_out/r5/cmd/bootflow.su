@@ -1,0 +1,3 @@
+bootflow.c:433:1:complete_bootflow	24	static
+bootflow.c:91:12:do_bootflow_scan	256	static
+bootflow.c:433:1:do_bootflow	24	static

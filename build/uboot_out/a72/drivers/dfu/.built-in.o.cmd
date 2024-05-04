@@ -1,0 +1,1 @@
+cmd_drivers/dfu/built-in.o :=  rm -f drivers/dfu/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/dfu/built-in.o drivers/dfu/dfu.o drivers/dfu/dfu_mmc.o drivers/dfu/dfu_ram.o drivers/dfu/dfu_sf.o

@@ -1,0 +1,17 @@
+ns16550.c:469:12:ns16550_serial_getinfo	8	static
+ns16550.c:541:5:ns16550_serial_of_to_plat	48	static
+ns16550.c:160:13:ns16550_writeb.isra.0	8	static
+ns16550.c:436:12:ns16550_serial_setconfig	8	static
+ns16550.c:174:12:ns16550_readb.isra.0	0	static
+ns16550.c:216:13:ns16550_setbrg	16	static
+ns16550.c:423:12:ns16550_serial_setbrg	8	static
+ns16550.c:403:12:ns16550_serial_pending	8	static
+ns16550.c:383:12:ns16550_serial_putc	16	static
+ns16550.c:413:12:ns16550_serial_getc	8	static
+ns16550.c:209:5:ns16550_calc_divisor	0	static
+ns16550.c:227:6:ns16550_init	16	static
+ns16550.c:504:5:ns16550_serial_probe	24	static
+ns16550.c:276:6:ns16550_reinit	16	static
+ns16550.c:286:6:ns16550_putc	16	static
+ns16550.c:303:6:ns16550_getc	8	static
+ns16550.c:315:5:ns16550_tstc	8	static

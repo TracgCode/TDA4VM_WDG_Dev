@@ -1,0 +1,1 @@
+cmd_spl/disk/built-in.o :=  rm -f spl/disk/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/disk/built-in.o spl/disk/part.o spl/disk/disk-uclass.o spl/disk/part_dos.o spl/disk/part_efi.o

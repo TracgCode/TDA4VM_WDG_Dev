@@ -1,0 +1,1 @@
+cmd_drivers/soc/built-in.o :=  rm -f drivers/soc/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/soc/built-in.o drivers/soc/ti/built-in.o drivers/soc/soc-uclass.o drivers/soc/soc_ti_k3.o

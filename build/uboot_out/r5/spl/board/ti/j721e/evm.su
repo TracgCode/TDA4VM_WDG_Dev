@@ -1,0 +1,14 @@
+evm.c:115:28:detect_enable_hyperflash	40	static
+evm.c:46:5:board_init	0	static
+evm.c:51:5:dram_init	0	static
+evm.c:62:13:board_get_usable_ram_top	0	static
+evm.c:73:5:dram_init_banksize	0	static
+evm.c:91:5:board_fit_config_name_match	8	static
+evm.c:147:6:spl_perform_fixups	0	static
+evm.c:154:5:ft_board_setup	16	static
+evm.c:172:5:do_board_detect	8	static
+evm.c:194:5:checkboard	8	static
+evm.c:246:13:board_fit_get_additionnal_images	8	static
+evm.c:382:6:configure_serdes_torrent	0	static
+evm.c:415:6:configure_serdes_sierra	0	static
+evm.c:556:6:spl_board_init	16	static

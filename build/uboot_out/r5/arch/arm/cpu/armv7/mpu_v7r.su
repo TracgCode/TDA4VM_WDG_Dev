@@ -1,0 +1,6 @@
+mpu_v7r.c:35:6:disable_mpu	0	static
+mpu_v7r.c:46:6:enable_mpu	0	static
+mpu_v7r.c:57:5:mpu_enabled	0	static
+mpu_v7r.c:62:6:mpu_config	0	static
+mpu_v7r.c:86:6:setup_mpu_regions	24	static
+mpu_v7r.c:112:6:enable_caches	8	static

@@ -1,0 +1,1 @@
+cmd_drivers/serial/built-in.o :=  rm -f drivers/serial/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/serial/built-in.o drivers/serial/serial-uclass.o drivers/serial/ns16550.o drivers/serial/serial_omap.o

@@ -1,0 +1,1 @@
+cmd_scripts/kconfig/zconf.tab.c := bison -oscripts/kconfig/zconf.tab.c -t -l /home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/scripts/kconfig/zconf.y

@@ -1,0 +1,1 @@
+cmd_board/ti/common/built-in.o :=  rm -f board/ti/common/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT board/ti/common/built-in.o board/ti/common/board_detect.o board/ti/common/k3_dfu.o

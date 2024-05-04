@@ -1,0 +1,6 @@
+clk-k3-pll.c:227:12:ti_pll_clk_disable	0	static
+clk-k3-pll.c:80:14:ti_pll_clk_get_rate	32	static
+clk-k3-pll.c:62:12:ti_pll_wait_for_lock	8	static
+clk-k3-pll.c:214:12:ti_pll_clk_enable	0	static
+clk-k3-pll.c:115:14:ti_pll_clk_set_rate	56	static
+clk-k3-pll.c:246:13:clk_register_ti_pll	24	static

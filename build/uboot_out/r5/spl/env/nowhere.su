@@ -1,0 +1,2 @@
+nowhere.c:23:12:env_nowhere_init	0	static
+nowhere.c:30:12:env_nowhere_load	0	static

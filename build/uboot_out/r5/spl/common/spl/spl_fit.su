@@ -1,0 +1,10 @@
+spl_fit.c:74:12:spl_fit_get_image_name	32	static
+spl_fit.c:153:12:spl_fit_get_image_node	16	static
+spl_fit.c:227:12:spl_load_fit_image	72	static
+spl_fit.c:364:12:spl_fit_append_fdt	72	static
+spl_fit.c:30:13:board_spl_fit_post_load	0	static
+spl_fit.c:34:14:board_spl_fit_size_align	0	static
+spl_fit.c:543:14:board_spl_fit_buffer_addr	16	static
+spl_fit.c:553:13:spl_load_simple_fit_skip_processing	0	static
+spl_fit.c:562:14:spl_load_simple_fit_fix_load	0	static
+spl_fit.c:693:5:spl_load_simple_fit	152	static

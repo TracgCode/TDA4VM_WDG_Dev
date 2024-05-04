@@ -1,0 +1,1 @@
+cmd_spl/drivers/power/domain/built-in.o :=  rm -f spl/drivers/power/domain/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/power/domain/built-in.o spl/drivers/power/domain/power-domain-uclass.o spl/drivers/power/domain/ti-power-domain.o

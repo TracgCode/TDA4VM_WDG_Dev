@@ -1,0 +1,4 @@
+ImagePos    Offset      Size  Name
+00000000  00000000  00040694  sysfw_fs
+00000000   00000000  00000694  ti-fs-cert-fs.bin
+00000694   00000694  00040000  ti-fs-firmware-j721e-hs-fs-enc.bin

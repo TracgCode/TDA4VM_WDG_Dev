@@ -1,0 +1,1 @@
+cmd_fs/ext4/built-in.o :=  rm -f fs/ext4/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT fs/ext4/built-in.o fs/ext4/ext4fs.o fs/ext4/ext4_common.o fs/ext4/dev.o fs/ext4/ext4_write.o fs/ext4/ext4_journal.o

@@ -1,0 +1,12 @@
+pinctrl-single.c:290:12:single_pin_compare	0	static
+pinctrl-single.c:100:21:single_read	8	static
+pinctrl-single.c:116:13:single_write	16	static
+pinctrl-single.c:240:12:single_request	24	static
+pinctrl-single.c:497:12:single_get_pins_count	8	static
+pinctrl-single.c:212:12:single_get_pin_muxing	56	static
+pinctrl-single.c:484:20:single_get_pin_name	16	static
+pinctrl-single.c:155:12:single_get_pin_by_offset	24	static
+pinctrl-single.c:571:12:single_of_to_plat	24	static
+pinctrl-single.c:534:12:single_probe	104	static
+pinctrl-single.c:273:28:single_allocate_function.isra.0	16	static
+pinctrl-single.c:449:12:single_set_state	80	static

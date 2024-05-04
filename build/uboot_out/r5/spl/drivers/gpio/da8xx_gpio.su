@@ -1,0 +1,9 @@
+da8xx_gpio.c:502:12:davinci_gpio_xlate	0	static
+da8xx_gpio.c:436:29:davinci_get_gpio_bank	8	static
+da8xx_gpio.c:489:12:davinci_gpio_get_function	8	static
+da8xx_gpio.c:472:12:davinci_gpio_get_value	8	static
+da8xx_gpio.c:463:12:davinci_gpio_direction_output	16	static
+da8xx_gpio.c:452:12:davinci_gpio_direction_input	8	static
+da8xx_gpio.c:544:12:davinci_gpio_of_to_plat	40	static
+da8xx_gpio.c:523:12:davinci_gpio_probe	24	static
+da8xx_gpio.c:479:12:davinci_gpio_set_value	16	static

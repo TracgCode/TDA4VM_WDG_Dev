@@ -1,0 +1,11 @@
+ti-power-domain.c:162:13:ti_pd_transition	0	static
+ti-power-domain.c:140:12:ti_pd_wait	24	static
+ti-power-domain.c:353:12:ti_power_domain_of_xlate	16	static
+ti-power-domain.c:111:12:ti_power_domain_probe	16	static
+ti-power-domain.c:180:12:ti_pd_get	8	static
+ti-power-domain.c:215:12:ti_pd_put	8	static
+ti-power-domain.c:175:4:ti_pd_state	0	static
+ti-power-domain.c:270:4:lpsc_get_state	0	static
+ti-power-domain.c:275:5:ti_lpsc_transition	24	static
+ti-power-domain.c:335:12:ti_power_domain_off	0	static
+ti-power-domain.c:328:12:ti_power_domain_on	0	static

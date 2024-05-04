@@ -1,0 +1,7 @@
+cache-cp15.c:277:6:icache_enable	0	static
+cache-cp15.c:282:6:icache_disable	0	static
+cache-cp15.c:287:5:icache_status	0	static
+cache-cp15.c:315:6:dcache_enable	8	static
+cache-cp15.c:320:6:dcache_disable	8	static
+cache-cp15.c:325:5:dcache_status	0	static
+cache-cp15.c:330:6:mmu_set_region_dcache_behaviour	0	static

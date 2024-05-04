@@ -1,0 +1,6 @@
+net.c:654:12:do_net	24	static
+net.c:635:12:do_net_list	48	static
+net.c:340:12:netboot_common	56	static
+net.c:28:12:do_bootp	0	static
+net.c:42:5:do_tftpb	0	static
+net.c:161:12:do_nfs	0	static

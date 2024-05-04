@@ -1,0 +1,1 @@
+cmd_lib/rsa/built-in.o :=  rm -f lib/rsa/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT lib/rsa/built-in.o lib/rsa/rsa-verify.o lib/rsa/rsa-mod-exp.o

@@ -1,0 +1,13 @@
+lpddr4_j721e.c:19:5:lpddr4_enablepiinitiator	0	static
+lpddr4_j721e.c:32:5:lpddr4_getctlinterruptmask	0	static
+lpddr4_j721e.c:47:5:lpddr4_setctlinterruptmask	12	static
+lpddr4_j721e.c:74:5:lpddr4_checkctlinterrupt	0	static
+lpddr4_j721e.c:102:5:lpddr4_ackctlinterrupt	0	static
+lpddr4_j721e.c:125:6:lpddr4_checkwrlvlerror	24	static
+lpddr4_j721e.c:165:5:lpddr4_getdebuginitinfo	32	static
+lpddr4_j721e.c:185:5:lpddr4_geteccenable	0	static
+lpddr4_j721e.c:213:5:lpddr4_seteccenable	0	static
+lpddr4_j721e.c:228:5:lpddr4_getreducmode	0	static
+lpddr4_j721e.c:242:5:lpddr4_setreducmode	0	static
+lpddr4_j721e.c:256:5:lpddr4_checkmmrreaderror	24	static
+lpddr4_j721e.c:276:5:lpddr4_getdslicemask	0	static

@@ -1,0 +1,3 @@
+k3_system_controller.c:221:12:k3_sysctrler_start	32	static
+k3_system_controller.c:166:12:k3_sysctrler_load	56	static
+k3_system_controller.c:302:12:k3_sysctrler_probe	32	static

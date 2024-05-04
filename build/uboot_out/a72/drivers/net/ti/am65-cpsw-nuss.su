@@ -1,0 +1,10 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:176:12:am65_cpsw_macsl_wait_for_idle	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:699:12:am65_cpsw_probe_nuss	128	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:516:12:am65_cpsw_read_rom_hwaddr	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:488:13:am65_cpsw_stop	48	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:468:12:am65_cpsw_free_pkt	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:459:12:am65_cpsw_recv	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:441:12:am65_cpsw_send	64	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:662:12:am65_cpsw_port_probe	160	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:160:5:am65_cpsw_macsl_reset	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/net/ti/am65-cpsw-nuss.c:285:12:am65_cpsw_start	144	static

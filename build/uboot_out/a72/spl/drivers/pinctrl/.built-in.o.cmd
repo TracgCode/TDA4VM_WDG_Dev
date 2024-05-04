@@ -1,0 +1,1 @@
+cmd_spl/drivers/pinctrl/built-in.o :=  rm -f spl/drivers/pinctrl/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT spl/drivers/pinctrl/built-in.o spl/drivers/pinctrl/pinctrl-uclass.o spl/drivers/pinctrl/nxp/built-in.o spl/drivers/pinctrl/pinctrl-single.o spl/drivers/pinctrl/broadcom/built-in.o

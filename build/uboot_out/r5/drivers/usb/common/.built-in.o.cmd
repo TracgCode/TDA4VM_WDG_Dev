@@ -1,0 +1,1 @@
+cmd_drivers/usb/common/built-in.o :=  rm -f drivers/usb/common/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/usb/common/built-in.o drivers/usb/common/common.o

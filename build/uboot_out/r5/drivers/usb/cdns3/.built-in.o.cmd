@@ -1,0 +1,1 @@
+cmd_drivers/usb/cdns3/built-in.o :=  rm -f drivers/usb/cdns3/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/usb/cdns3/built-in.o drivers/usb/cdns3/cdns3.o drivers/usb/cdns3/cdns3-ti.o

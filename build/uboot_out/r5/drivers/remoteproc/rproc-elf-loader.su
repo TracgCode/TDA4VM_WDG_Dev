@@ -1,0 +1,9 @@
+rproc-elf-loader.c:49:5:rproc_elf32_sanity_check	16	static
+rproc-elf-loader.c:106:5:rproc_elf64_sanity_check	24	static
+rproc-elf-loader.c:161:5:rproc_elf32_load_image	40	static
+rproc-elf-loader.c:207:5:rproc_elf64_load_image	88	static
+rproc-elf-loader.c:261:5:rproc_elf_load_image	8	static
+rproc-elf-loader.c:290:7:rproc_elf_get_boot_addr	0	static
+rproc-elf-loader.c:374:5:rproc_elf32_load_rsc_table	40	static
+rproc-elf-loader.c:483:5:rproc_elf64_load_rsc_table	56	static
+rproc-elf-loader.c:519:5:rproc_elf_load_rsc_table	4	static

@@ -1,0 +1,1 @@
+cmd_spl/drivers/dma/ti/k3-psil-data.o := rm -f spl/drivers/dma/ti/k3-psil-data.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/dma/ti/k3-psil-data.o spl/drivers/dma/ti/k3-psil.o spl/drivers/dma/ti/k3-psil-j721e.o

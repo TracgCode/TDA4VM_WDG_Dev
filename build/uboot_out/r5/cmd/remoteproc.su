@@ -1,0 +1,5 @@
+remoteproc.c:245:12:do_remoteproc	24	static
+remoteproc.c:105:12:do_remoteproc_list	72	static
+remoteproc.c:162:12:do_remoteproc_wrapper	16	static
+remoteproc.c:123:12:do_remoteproc_load	32	static
+remoteproc.c:72:12:do_rproc_init	16	static

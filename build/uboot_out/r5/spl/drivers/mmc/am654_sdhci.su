@@ -1,0 +1,10 @@
+am654_sdhci.c:357:13:am654_sdhci_write_b	0	static
+am654_sdhci.c:441:12:j721e_4bit_sdhci_set_ios_post	16	static
+am654_sdhci.c:584:12:am654_sdhci_of_to_plat	24	static
+am654_sdhci.c:638:12:am654_sdhci_bind	16	static
+am654_sdhci.c:218:13:am654_sdhci_write_itapdly.isra.0	16	static
+am654_sdhci.c:241:12:am654_sdhci_set_ios_post	32	static
+am654_sdhci.c:379:12:am654_sdhci_execute_tuning	32	static
+am654_sdhci.c:530:12:am654_sdhci_probe	72	static
+am654_sdhci.c:293:5:am654_sdhci_init	24	static
+am654_sdhci.c:331:12:am654_sdhci_deferred_probe	24	static

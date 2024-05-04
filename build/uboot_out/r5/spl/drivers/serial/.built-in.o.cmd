@@ -1,0 +1,1 @@
+cmd_spl/drivers/serial/built-in.o :=  rm -f spl/drivers/serial/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/serial/built-in.o spl/drivers/serial/serial-uclass.o spl/drivers/serial/ns16550.o spl/drivers/serial/serial_omap.o

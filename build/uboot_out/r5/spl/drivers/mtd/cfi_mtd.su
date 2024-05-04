@@ -1,0 +1,7 @@
+cfi_mtd.c:99:13:cfi_mtd_sync	0	static
+cfi_mtd.c:120:12:cfi_mtd_unlock	16	static
+cfi_mtd.c:108:12:cfi_mtd_lock	16	static
+cfi_mtd.c:80:12:cfi_mtd_write	16	static
+cfi_mtd.c:67:12:cfi_mtd_read	16	static
+cfi_mtd.c:24:12:cfi_mtd_erase	24	static
+cfi_mtd.c:203:5:cfi_mtd_init	56	static

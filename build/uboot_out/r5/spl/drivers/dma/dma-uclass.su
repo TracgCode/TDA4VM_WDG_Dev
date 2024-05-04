@@ -1,0 +1,12 @@
+dma-uclass.c:111:5:dma_request	0	static
+dma-uclass.c:51:5:dma_get_by_index	104	static
+dma-uclass.c:94:5:dma_get_by_name	16	static
+dma-uclass.c:125:5:dma_free	0	static
+dma-uclass.c:137:5:dma_enable	0	static
+dma-uclass.c:149:5:dma_disable	0	static
+dma-uclass.c:161:5:dma_prepare_rcv_buf	0	static
+dma-uclass.c:173:5:dma_receive	0	static
+dma-uclass.c:185:5:dma_send	4	static
+dma-uclass.c:197:5:dma_get_cfg	0	static
+dma-uclass.c:210:5:dma_get_device	24	static
+dma-uclass.c:234:5:dma_memcpy	48	static

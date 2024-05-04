@@ -1,0 +1,1 @@
+cmd_spl/drivers/clk/imx/built-in.o :=  rm -f spl/drivers/clk/imx/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT spl/drivers/clk/imx/built-in.o spl/drivers/clk/imx/clk-gate2.o spl/drivers/clk/imx/clk-pllv3.o spl/drivers/clk/imx/clk-pfd.o

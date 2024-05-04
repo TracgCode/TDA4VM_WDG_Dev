@@ -1,0 +1,1 @@
+cmd_drivers/net/built-in.o :=  rm -f drivers/net/built-in.o; ~/ti/gcc-arm-9.2-2019.12-x86_64-arm-none-linux-gnueabihf/bin/arm-none-linux-gnueabihf-ar cDPrsT drivers/net/built-in.o drivers/net/mscc_eswitch/built-in.o drivers/net/phy/built-in.o drivers/net/qe/built-in.o drivers/net/ti/built-in.o

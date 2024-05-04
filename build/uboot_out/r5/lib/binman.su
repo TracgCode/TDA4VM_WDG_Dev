@@ -1,0 +1,9 @@
+binman.c:61:12:binman_entry_find_internal	16	static
+binman.c:43:12:find_image_node.isra.0	16	static
+binman.c:82:5:binman_entry_find	0	static
+binman.c:87:5:binman_entry_map	32	static
+binman.c:104:8:binman_section_find_node	0	static
+binman.c:109:6:binman_set_rom_offset	0	static
+binman.c:114:5:binman_get_rom_offset	0	static
+binman.c:119:5:binman_select_subnode	24	static
+binman.c:137:5:binman_init	8	static

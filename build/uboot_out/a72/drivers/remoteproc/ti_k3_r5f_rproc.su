@@ -1,0 +1,15 @@
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:568:12:k3_r5f_init	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:532:14:k3_r5f_da_to_va	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:133:12:k3_r5f_proc_request	48	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:158:13:k3_r5f_proc_release	48	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:250:12:k3_r5f_core_sanity_check	16	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:372:12:k3_r5f_core_run	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:856:12:k3_r5f_remove	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:359:12:k3_r5f_core_halt	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:393:12:k3_r5f_start	64	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:794:12:k3_r5f_probe	144	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:499:12:k3_r5f_stop	80	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:904:12:k3_r5f_cluster_probe	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:573:12:k3_r5f_reset	0	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:286:6:k3_r5f_init_tcm_memories	32	static
+/home/james/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/u-boot-2023.04+gitAUTOINC+bd74e615a6-gbd74e615a6/drivers/remoteproc/ti_k3_r5f_rproc.c:305:12:k3_r5f_load	144	static

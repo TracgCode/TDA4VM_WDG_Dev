@@ -1,0 +1,1 @@
+cmd_drivers/mtd/spi/built-in.o :=  rm -f drivers/mtd/spi/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/mtd/spi/built-in.o drivers/mtd/spi/sf-uclass.o drivers/mtd/spi/spi-nor.o drivers/mtd/spi/sf_mtd.o

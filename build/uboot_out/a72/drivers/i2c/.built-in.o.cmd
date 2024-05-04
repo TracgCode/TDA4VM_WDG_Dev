@@ -1,0 +1,1 @@
+cmd_drivers/i2c/built-in.o :=  rm -f drivers/i2c/built-in.o; ~/ti/arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar cDPrsT drivers/i2c/built-in.o drivers/i2c/i2c-uclass.o drivers/i2c/i2c-gpio.o drivers/i2c/omap24xx_i2c.o
