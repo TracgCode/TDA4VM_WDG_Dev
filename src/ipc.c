@@ -131,6 +131,7 @@ void rpmsg_responderFxn(void *arg0, void *arg1)
     uint32_t            bufSize = rpmsgDataSize;
     char                str[MSGSIZE];
 
+    /* Step 1. Create buffre for RPMessage*/
     buf = &pRecvTaskBuf[gRecvTaskBufIdx++ * rpmsgDataSize];
     if(buf == NULL)
     {
@@ -155,6 +156,7 @@ void rpmsg_responderFxn(void *arg0, void *arg1)
         RecvEndPt = myEndPt;
     }
 
+    /* Step 2. Announce the targer core that it's ready to receive msg */
     status = RPMessage_announce(RPMESSAGE_ALL, myEndPt, name);
     if(status != IPC_SOK)
     {
@@ -162,8 +164,10 @@ void rpmsg_responderFxn(void *arg0, void *arg1)
         return;
     }
 
+    /* Step 3. Loop for receive message and respond */
     while(!g_exitRespTsk)
     {
+        /* Step 3a. Wait for incomming message */
         status = RPMessage_recv(handle, (Ptr)str, &len, &remoteEndPt, &remoteProcId,
                 IPC_RPMESSAGE_TIMEOUT_FOREVER);
         if(status != IPC_SOK)
@@ -180,6 +184,7 @@ void rpmsg_responderFxn(void *arg0, void *arg1)
 #endif
         }
 
+        /* Step 3b. Send respond */
         status = sscanf(str, "ping %d", &n);
         if(status == 1)
         {
@@ -416,8 +421,8 @@ int32_t Ipc_echo_test(void)
 
     Ipc_init(&initPrms);
 
-    //App_printf("Required Local memory for Virtio_Object = %d\r\n",
-    //   numProc * Ipc_getVqObjMemoryRequiredPerCore());
+    App_printf("Required Local memory for Virtio_Object = %d\r\n",
+                numProc * Ipc_getVqObjMemoryRequiredPerCore());
 
     /* If A72 remote core is running Linux OS, then
      * load resource table
@@ -435,7 +440,7 @@ int32_t Ipc_echo_test(void)
     App_printf("Linux VDEV ready now .....\n");
 
     /* Step2 : Initialize Virtio */
-    vqParam.vqObjBaseAddr = (void*)pSysVqBuf;
+    vqParam.vqObjBaseAddr = (void*)pSysVqBuf; // 0xA0400000 ~ 0xA00FFFFF
     vqParam.vqBufSize     = numProc * Ipc_getVqObjMemoryRequiredPerCore();
     vqParam.vringBaseAddr = (void*)VRING_BASE_ADDRESS;
     vqParam.vringBufSize  = IPC_VRING_BUFFER_SIZE;
