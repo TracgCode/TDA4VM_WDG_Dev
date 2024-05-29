@@ -42,8 +42,10 @@ copy-boot-images: build/images build/uboot_out/a72/tispl.bin build/uboot_out/a72
 	cp build/uboot_out/a72/tispl.bin build/images/tispl.bin
 	cp build/uboot_out/a72/u-boot.img build/images/u-boot.img
 
-	cp build/uboot_out/r5/tiboot3.bin build/images/tiboot.bin
+	cp build/uboot_out/r5/tiboot3.bin build/images/tiboot3.bin
 	cp build/uboot_out/r5/sysfw.itb build/images/sysfw.itb
+
+	sudo cp build/images/* /mnt/BOOT/
 # BINMAN_INDIRS=~/ti-processor-sdk-linux-adas-j721e-evm-09_00_01_03/board-support/prebuilt-images
 
 build/%.oer5f: src/%.c

@@ -24,8 +24,8 @@ swrv = INTEGER:1
 
 [ sysfw_image_integrity ]
 shaType                = OID:2.16.840.1.101.3.4.2.3
-shaValue               = FORMAT:HEX,OCT:50bd0936ea75296d06d95bbdfbb09d55f073ea88b4f5de283434e1514816db5d56ea07a210369d97fe1f3237677fe16c5e92792d22e346fe16d050318e371755
-imageSize              = INTEGER:320152
+shaValue               = FORMAT:HEX,OCT:6667aa39c3b65bab38a385ee69d7053668634997454de8a8beef85a0cd22b200ef92c8c77b294675eb536034ac6dc81c0df1759e535462df96957d524c00f83e
+imageSize              = INTEGER:320280
 
 [ sysfw_image_load ]
 destAddr = FORMAT:HEX,OCT:00000000

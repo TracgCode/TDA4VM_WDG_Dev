@@ -415,10 +415,13 @@ int32_t Ipc_echo_test(void)
     App_printf("IPC_echo_test (core : %s) .....\r\n", Ipc_mpGetSelfName());
 
     /* Initialize params with defaults */
+    //App_printf("Running IpcInitPrms_init(0U, &initPrms);");
     IpcInitPrms_init(0U, &initPrms);
 
+    //App_printf("Running initPrms.printFxn = &IpcTestPrint;");
     initPrms.printFxn = &IpcTestPrint;
 
+    //App_printf("Running Ipc_init(&initPrms);");
     Ipc_init(&initPrms);
 
     App_printf("Required Local memory for Virtio_Object = %d\r\n",
@@ -429,12 +432,15 @@ int32_t Ipc_echo_test(void)
      */
     Ipc_loadResourceTable((void*)&ti_ipc_remoteproc_ResourceTable);
 
+
     /* Wait for Linux VDev ready... */
+    App_printf("Wait for Linux VDev ready...\n");
     for(t = 0; t < numProc; t++)
     {
         while(!Ipc_isRemoteReady(pRemoteProcArray[t]))
         {
-            TaskP_sleep(10);
+            TaskP_sleep(500);
+            App_printf("Waiting for remote %d...", t);
         }
     }
     App_printf("Linux VDEV ready now .....\n");

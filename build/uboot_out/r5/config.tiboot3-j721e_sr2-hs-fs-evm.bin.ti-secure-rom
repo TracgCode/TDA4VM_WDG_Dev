@@ -31,7 +31,7 @@ emailAddress           = support@ti.com
 
  [ image_integrity ]
  shaType = OID:2.16.840.1.101.3.4.2.3
- shaValue = FORMAT:HEX,OCT:477f6f744490cdfa43e064ed8398fcc1794fa01041bbf79721a72a48177ef4252f880cd016812c55f3ab6cd5e4a67b00bde9ecf73eb3a766dd8464fc8e5dbfcb
+ shaValue = FORMAT:HEX,OCT:64a7bff34598b7e9308dca62bf28b65d2b70e33229daefea848ee876f67fbfb0a68e9c0e2dd1ff635a0e3a3a36d959ecf5f35b974feab35a3106d73ab558ab24
 
  [ swrv ]
  swrv = INTEGER:1
